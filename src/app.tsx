@@ -1,7 +1,13 @@
-import { Button } from "./components/ui/button"
+import { Header } from "./components/shared/header";
+import { Main } from "./components/main";
+import { Footer } from "./components/shared/footer";
 
 export default function App() {
   return (
-    <Button className="cursor-pointer">Começar</Button>
-  )
+    <div className="font-poppins w-full h-full">
+      <Header />
+      <Main />
+      {/* <Footer /> */}
+    </div>
+  );
 }
