@@ -7,7 +7,7 @@ export default function App() {
     <div className="font-poppins w-full h-full">
       <Header />
       <Main />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
