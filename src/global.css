@@ -9,7 +9,7 @@
 
 @theme {
   --font-poppins: 'Poppins', sans-serif;
-  --text-gray-light: '#8C8C8C'
+  --color-gray-light: oklch(0.86 0.0703 164.5)
 }
 
 @theme inline {
