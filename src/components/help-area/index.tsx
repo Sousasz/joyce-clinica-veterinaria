@@ -1,10 +1,10 @@
-import { Head5 } from "../../components/shared/head";
+import { Head } from "../../components/shared/head";
 import { FaWhatsapp } from "react-icons/fa";
 
 export function HelpArea() {
   return (
     <div className="flex flex-col gap-3">
-      <Head5>AJUDA E CONTATO</Head5>
+      <Head>AJUDA E CONTATO</Head>
 
       <div className="flex flex-col gap-4">
         <span>FAQ</span>

@@ -1,11 +1,14 @@
-import vetCareImage from "../../../public/vet-care.jpg"
 
-export function CarouselItemContent() {
+type CarouselItemCOntentProps = {
+  service: object;
+};
+
+export function CarouselItemContent({ service }: CarouselItemCOntentProps) {
   return (
     <div className="flex justify-center items-center">
-      <img src={vetCareImage} alt="" />
-      <span className="text-white font-bold text-4xl absolute -tracking-[-0.15rem]">
-        Medicação
+      <img src={service.imgUrl} alt={`Imagem do serviço ${service.type}`} />
+      <span className="text-white text-center font-bold text-3xl max-w-sm absolute -tracking-[-0.15rem]">
+        {service.type}
       </span>
     </div>
   );

@@ -1,8 +1,8 @@
-type Head5Props = {
+type HeadProps = {
   children: React.ReactNode;
 };
 
-export function Head5({ children, ...rest }: Head5Props) {
+export function Head({ children, ...rest }: HeadProps) {
   return (
     <h5 {...rest} className="text-[#8C8C8C]">
       {children}

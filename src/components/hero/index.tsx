@@ -7,13 +7,13 @@ export function Hero() {
     <section className="w-full h-full ">
       <div className="bg-gray-light flex flex-col relative">
         <div className="w-full flex justify-end">
-          <FirstElement className="size-48" />
+          <FirstElement className="size-52" />
         </div>
 
         <Brand />
 
         <div className="h-full flex items-end">
-          <SecondElement className="size-48" />
+          <SecondElement className="size-52" />
         </div>
       </div>
     </section>
