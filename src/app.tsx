@@ -1,11 +1,11 @@
-import { Header } from "./components/shared/header";
+import { Header } from "./components/header";
 import { Main } from "./components/main";
-import { Footer } from "./components/shared/footer";
+import { Footer } from "./components/footer";
 
 export default function App() {
   return (
     <div className="font-poppins w-full h-full">
-      <Header />
+      <Header />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
       <Main />
       <Footer />
     </div>

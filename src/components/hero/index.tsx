@@ -5,7 +5,7 @@ import { Brand } from "../brand";
 export function Hero() {
   return (
     <section className="w-full h-full ">
-      <div className="bg-gray-light flex flex-col relative">
+      <div className="bg-green-light flex flex-col relative">
         <div className="w-full flex justify-end">
           <FirstElement className="size-52" />
         </div>

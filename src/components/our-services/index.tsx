@@ -6,7 +6,7 @@ export function OurServices() {
   return (
     <section className="flex flex-col items-center gap-10">
       <h3 className="text-2xl">
-        <span className="font-bold text-gray-light">Nossos</span>{" "}
+        <span className="font-bold text-green-light">Nossos</span>{" "}
         serviços
       </h3>
 
