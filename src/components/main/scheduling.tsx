@@ -1,5 +1,5 @@
 import { Touchable } from "../shared/touchable";
-import { About } from "../about";
+import { About } from "./about";
 
 export function Scheduling() {
   return (

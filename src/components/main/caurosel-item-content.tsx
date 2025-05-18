@@ -1,9 +1,9 @@
 
-type CarouselItemCOntentProps = {
+type CarouselItemContentProps = {
   service: object;
 };
 
-export function CarouselItemContent({ service }: CarouselItemCOntentProps) {
+export function CarouselItemContent({ service }: CarouselItemContentProps) {
   return (
     <div className="flex justify-center items-center">
       <img src={service.imgUrl} alt={`Imagem do serviço ${service.type}`} />

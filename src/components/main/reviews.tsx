@@ -1,4 +1,4 @@
-import { Review } from "../review";
+import { Review } from "./review";
 import { Touchable } from "../shared/touchable";
 
 export function Reviews() {

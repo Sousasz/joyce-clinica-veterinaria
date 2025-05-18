@@ -1,7 +1,7 @@
-import { Hero } from "../hero";
-import { OurServices } from "../our-services";
-import { Scheduling } from "../scheduling";
-import { Reviews } from "../reviews";
+import { Hero } from "./hero";
+import { OurServices } from "./our-services";
+import { Scheduling } from "./scheduling";
+import { Reviews } from "./reviews";
 
 export function Main() {
   return (

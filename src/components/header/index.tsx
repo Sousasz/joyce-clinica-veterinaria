@@ -1,4 +1,4 @@
-import { CallToAction } from "@/components/call-to-action";
+import { CallToAction } from "./call-to-action";
 import { links } from "@/constants/links";
 import DogImage from "../../../public/assets/logo.svg?react";
 import avatarImage from "../../../public/avatar.jpg";

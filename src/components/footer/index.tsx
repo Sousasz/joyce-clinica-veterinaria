@@ -1,6 +1,6 @@
-import { Contact } from "@/components/contact";
-import { Logo } from "@/components/logo";
-import { Company } from "@/components/company";
+import { Contact } from "./contact";
+import { Logo } from "./logo"
+import { Company } from "./company";
 
 export function Footer() {
   return (

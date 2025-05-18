@@ -1,5 +1,5 @@
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
-import { CarouselItemContent } from "../caurosel-item-content";
+import { CarouselItemContent } from "./caurosel-item-content";
 import { carousel } from "@/constants/carousel";
 
 export function OurServices() {
