@@ -8,7 +8,7 @@ export function Reviews() {
         <span className="font-bold text-green-light">Nossas</span> Avaliações
       </h3>
 
-      <div className="flex flex-col gap-5">
+      <div className="gap-20 grid grid-cols-[repeat(auto-fill,_minmax(390px,_1fr))]">
         <Review />
         <Review />
         <Review />
