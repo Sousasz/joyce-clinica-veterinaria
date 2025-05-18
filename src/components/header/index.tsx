@@ -1,6 +1,6 @@
 import { CallToAction } from "@/components/call-to-action";
 import { links } from "@/constants/links";
-import DogImage from "../../../public/logo.svg?react";
+import DogImage from "../../../public/assets/logo.svg?react";
 import avatarImage from "../../../public/avatar.jpg";
 
 export function Header() {

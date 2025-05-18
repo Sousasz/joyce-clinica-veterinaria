@@ -1,5 +1,5 @@
-import FirstElement from "../../../public/first-element.svg?react";
-import SecondElement from "../../../public/second-element.svg?react";
+import FirstElement from "../../../public/assets/first-element.svg?react";
+import SecondElement from "../../../public/assets/second-element.svg?react";
 import { Brand } from "../brand";
 
 export function Hero() {

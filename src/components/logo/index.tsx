@@ -1,4 +1,4 @@
-import DogImage from "../../../public/logo.svg?react";
+import DogImage from "../../../public/assets/logo.svg?react";
 
 export function Logo() {
   return (
