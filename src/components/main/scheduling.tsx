@@ -1,12 +1,11 @@
 import { Touchable } from "../shared/touchable";
 import { About } from "./about";
+import { Title } from "../shared/title";
 
 export function Scheduling() {
   return (
     <section className="flex flex-col items-center gap-10 w-full">
-      <h3 className="text-2xl">
-        <span className="font-bold text-green-light">Faça seu</span> agendamento
-      </h3>
+      <Title textInBold="Faça seu" text="agendamento" />
 
       <About />
       

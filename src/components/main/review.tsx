@@ -6,7 +6,7 @@ import { IoStarSharp } from "react-icons/io5";
 export function Review() {
   return (
     <div className="flex justify-center gap-5">
-      <img className="w-28 h-9" src={avatarImage} alt="Imagem do cliente" />
+      <img className="w-full h-14" src={avatarImage} alt="Imagem do cliente" />
       <div className="flex flex-col">
         <Rating
           initialRating={3}
