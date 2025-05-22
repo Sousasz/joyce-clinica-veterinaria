@@ -2,7 +2,7 @@ import joycePhoto from "../../../public/joyce-photo.jpg"
 
 export function About() {
   return (
-    <div className="flex gap-10">
+    <div className="flex max-[855px]:flex-col max-[855px]:items-center gap-10">
       <img
         className="max-w-96 shadow-default"
         src={joycePhoto}

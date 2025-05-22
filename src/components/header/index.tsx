@@ -2,7 +2,7 @@ import { CallToAction } from "./call-to-action";
 import { links } from "@/constants/links";
 import DogImage from "../../../public/assets/logo.svg?react";
 import avatarImage from "../../../public/avatar.jpg";
-import { IoIosMenu } from "react-icons/io";
+import { Menu } from "./menu";
 
 export function Header() {
   return (
@@ -25,9 +25,7 @@ export function Header() {
 
         <div className="flex gap-12">
           <img className="size-10" src={avatarImage} alt="" />
-          <button className="cursor-pointer">
-            <IoIosMenu className="size-10 block lg:hidden" />
-          </button>
+          <Menu />
         </div>
       </header>
 
