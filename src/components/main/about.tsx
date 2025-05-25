@@ -4,7 +4,7 @@ export function About() {
   return (
     <div className="flex max-[855px]:flex-col max-[855px]:items-center gap-10">
       <img
-        className="max-w-96 shadow-default"
+        className="shadow-default"
         src={joycePhoto}
         alt="Imagem da Dr. Joyce"
       />
