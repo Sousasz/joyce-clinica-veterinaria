@@ -10,8 +10,8 @@ export function OurServices() {
         <Title textInBold="Nossos" text="serviços" />
       </div>
 
-      <Carousel className="">
-        <CarouselContent className="flex gap-5">
+      <Carousel>
+        <CarouselContent className="flex gap-5 ">
           {carousel.map((service, index) => {
             return (
               <CarouselItem key={index} className="basis-1/3">

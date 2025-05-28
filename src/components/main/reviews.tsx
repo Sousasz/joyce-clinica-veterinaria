@@ -7,7 +7,7 @@ export function Reviews() {
     <section className="flex flex-col items-center gap-10">
       <Title textInBold="Nossas" text="avaliações" />
 
-      <div className="gap-20 grid grid-cols-[repeat(auto-fill,_minmax(390px,_1fr))]">
+      <div className="gap-20 grid place-items-center grid-cols-[repeat(auto-fill,_minmax(390px,_1fr))]">
         <Review />
         <Review />
         <Review />

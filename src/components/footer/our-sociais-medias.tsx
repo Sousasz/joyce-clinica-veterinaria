@@ -3,8 +3,8 @@ import { Head } from "../shared/head";
 
 export function OurSociaisMedias() {
   return (
-    <div className="flex flex-col justify-start items-center gap-2">
-      <Head>NOSSAS REDES</Head>
+    <div className="flex flex-col justify-start items-center max-[600px]:items-start gap-2">
+      <Head>Nossas redes</Head>
 
       <div className="flex items-center gap-2">
         <FaInstagram className="size-7" />

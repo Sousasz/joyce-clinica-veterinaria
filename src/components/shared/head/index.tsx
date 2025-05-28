@@ -1,11 +1,12 @@
 type HeadProps = {
-  children: React.ReactNode;
+  children: string;
+  className?: string
 };
 
-export function Head({ children, ...rest }: HeadProps) {
+export function Head({ children, className, ...rest }: HeadProps) {
   return (
-    <h5 {...rest} className="text-[#8C8C8C]">
-      {children}
+    <h5 {...rest} className={`text-gray-base ${className}`}>
+      {children.toUpperCase()}
     </h5>
   );
 }
