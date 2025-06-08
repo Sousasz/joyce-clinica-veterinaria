@@ -6,6 +6,9 @@ import { Areas } from "./areas";
 import { Chatbot } from "./chatbot";
 
 export function Main() {
+
+
+
   return (
     <main className="flex flex-col items-center gap-36 p-8" id="home">
       <Hero />
