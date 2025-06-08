@@ -4,7 +4,7 @@ import { Title } from "../shared/title";
 
 export function Scheduling() {
   return (
-    <section className="flex flex-col items-center gap-10 w-full">
+    <section className="flex flex-col items-center gap-10 w-full" id="scheduling">
       <Title textInBold="Faça seu" text="agendamento" />
 
       <About />

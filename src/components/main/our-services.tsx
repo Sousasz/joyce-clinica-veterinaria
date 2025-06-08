@@ -5,7 +5,7 @@ import { Title } from "../shared/title";
 
 export function OurServices() {
   return (
-    <section className="flex flex-col items-center gap-10">
+    <section className="flex flex-col items-center gap-10" id="services">
       <div>
         <Title textInBold="Nossos" text="serviços" />
       </div>

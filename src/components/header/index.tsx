@@ -1,10 +1,17 @@
 import { CallToAction } from "./call-to-action";
-import { links } from "@/constants/links";
+import { IoIosMenu } from "react-icons/io";
 import DogImage from "../../../public/assets/logo.svg?react";
 import avatarImage from "../../../public/avatar.jpg";
-import { Menu } from "./menu";
+import { useState } from "react";
+import { links } from "@/constants/links";
 
 export function Header() {
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
+
+  function onClickToOpenTheMenu() {
+    setIsOpenMenu(!isOpenMenu);
+  }
+
   return (
     <>
       <header className="flex justify-between items-center py-5 px-10">
@@ -23,9 +30,33 @@ export function Header() {
           </nav>
         </div>
 
-        <div className="flex gap-12">
-          <img className="size-10" src={avatarImage} alt="" />
-          <Menu />
+        <div className="flex flex-col">
+          <div className="flex gap-10">
+            <img
+              className="size-10"
+              src={avatarImage}
+              alt="Imagem do usuário"
+            />
+            <button onClick={onClickToOpenTheMenu} className="cursor-pointer">
+              <IoIosMenu className="size-10 block lg:hidden" />
+            </button>
+          </div>
+
+          {isOpenMenu ? (
+            <>
+              <div className="w-full flex justify-end">
+                <ul className="bg-white border border-b-black border-l-black border-white p-3 flex flex-col gap-5 bottom-0 top-[6.5rem] right-0 absolute z-1 h-58">
+                  {links.map((item, index) => {
+                    return (
+                      <li key={index}>
+                        <a href={`#${item.id}`}>{item.link}</a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </>
+          ) : null}
         </div>
       </header>
 

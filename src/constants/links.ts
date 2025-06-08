@@ -15,11 +15,15 @@ export const links: LinkProps = [
     link: 'Nossos Serviços'
   },
   {
-    id: 'Agenda' ,
+    id: 'scheduling' ,
     link: 'Agendamento'
   },
   {
-    id: 'stars' ,
+    id: 'reviews' ,
     link: 'Nossas Avaliações'
+  },
+  {
+    id: 'areas' ,
+    link: 'Áreas atendidas'
   }
 ]

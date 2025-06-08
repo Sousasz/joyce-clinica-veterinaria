@@ -4,7 +4,7 @@ import { Brand } from "./brand";
 
 export function Hero() {
   return (
-    <section className="w-full h-full ">
+    <section className="w-full h-full">
       <div className="bg-green-light flex flex-col relative">
         <div className="w-full flex justify-end">
           <FirstElement className="size-52 max-[425px]:size-32" />
