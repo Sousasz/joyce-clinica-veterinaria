@@ -9,8 +9,8 @@ export function ChatBotQuestion({ children }: ChatBotQuestionProps) {
     <div className="flex flex-row-reverse gap-3 items-end">
       <img className="size-10" src={avatarImage} alt="" />
 
-      <div className="max-w-[80%] bg-green-light border rounded-t-xl rounded-bl-xl p-3 text-start shadow-md">
-        <p>{children}</p>
+      <div className="max-w-[80%] max-h-full bg-green-light border rounded-t-xl rounded-bl-xl p-3 text-start shadow-md">
+        <p className=" break-words overflow-hidden">{children}</p>
       </div>
     </div>
   );
