@@ -1,6 +1,7 @@
 import { Touchable } from "../shared/touchable";
 import { About } from "./about";
 import { Title } from "../shared/title";
+import { SchedulingModal } from "../modals/scheduling-modal";
 
 export function Scheduling() {
   return (
@@ -9,7 +10,7 @@ export function Scheduling() {
 
       <About />
       
-      <Touchable className="m-12">Clique aqui para agendar uma consulta</Touchable>
+      <SchedulingModal />
     </section>
   );
 }
