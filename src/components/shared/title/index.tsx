@@ -8,8 +8,8 @@ type TitleProps = {
 
 export function Title({ textInBold, text, className }: TitleProps) {
   return (
-    <h3 className="text-2xl relative">
-      <span className={`font-bold text-green-light ${className}`}>
+    <h3 className={`text-2xl relative ${className}`}>
+      <span className="font-bold text-green-light ">
         {textInBold}
       </span>{" "}
       {text}

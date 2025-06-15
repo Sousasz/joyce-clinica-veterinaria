@@ -1,7 +1,6 @@
-import { Touchable } from "../shared/touchable";
 import { About } from "./about";
 import { Title } from "../shared/title";
-import { SchedulingModal } from "../modals/scheduling-modal";
+import { SchedulingModal } from "../modals/scheduling-modal/index";
 
 export function Scheduling() {
   return (
