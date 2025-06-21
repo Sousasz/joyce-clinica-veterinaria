@@ -11,10 +11,13 @@ export function OurServices() {
       </div>
 
       <Carousel>
-        <CarouselContent className="flex gap-5 ">
+        <CarouselContent>
           {carousel.map((service, index) => {
             return (
-              <CarouselItem key={index} className="basis-1/3">
+              <CarouselItem
+                className="basis-1/3 max-w-[90%] max-[415px]:w-[5rem]"
+                key={index}
+              >
                 <CarouselItemContent service={service} />
               </CarouselItem>
             );

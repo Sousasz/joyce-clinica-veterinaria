@@ -1,6 +1,6 @@
 import { Review } from "./review";
-import { Touchable } from "../shared/touchable";
 import { Title } from "../shared/title";
+import { ReviewsModal } from "../modals/reviews-modal";
 
 export function Reviews() {
   return (
@@ -14,7 +14,7 @@ export function Reviews() {
         <Review />
       </div>
 
-      <Touchable className="mt-28">Ver mais avaliações</Touchable>
+      <ReviewsModal />
     </section>
   );
 }
