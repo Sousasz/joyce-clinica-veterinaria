@@ -1,10 +1,8 @@
 import { MedicinesModal } from "../modals/medicines-modal";
 import { MedicinesInjectablesModal } from "../modals/medicines-injectables-modal";
+import { VacinesModal } from "../modals/vacines-modal";
 
-import {
-  Dialog,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 
 type CarouselItemContentProps = {
   service: object;
@@ -30,15 +28,13 @@ export function CarouselItemContent({ service }: CarouselItemContentProps) {
             </button>
           </DialogTrigger>
 
-
           {service.type === "Medicação" ? (
             <MedicinesModal />
-          ) : service.type === "Medicação injetável" ? (
+          ) : service.type === "Medicação Injetável" ? (
             <MedicinesInjectablesModal />
-          ) : (
-            null
-          )}
-          
+          ) : service.type === "Vacinação" ? (
+            <VacinesModal />
+          ) : null}
         </form>
       </Dialog>
     </>

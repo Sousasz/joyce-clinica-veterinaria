@@ -1,7 +1,8 @@
 import { CallToAction } from "./call-to-action";
 import { IoIosMenu } from "react-icons/io";
 import DogImage from "../../../public/assets/logo.svg?react";
-import avatarImage from "../../../public/avatar.jpg";
+import { UserSignIn } from "./user-signin";
+
 import { useState } from "react";
 import { links } from "@/constants/links";
 
@@ -32,11 +33,8 @@ export function Header() {
 
         <div className="flex flex-col">
           <div className="flex gap-10">
-            <img
-              className="size-10"
-              src={avatarImage}
-              alt="Imagem do usuário"
-            />
+            <UserSignIn />
+
             <button onClick={onClickToOpenTheMenu} className="cursor-pointer">
               <IoIosMenu className="size-10 block lg:hidden" />
             </button>

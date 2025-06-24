@@ -1,15 +1,21 @@
-import { medicines } from "@/constants/medicines"
+import { medicines } from "@/constants/medicines";
 
 export function MedicinesMainContent() {
-  return( 
-    <div className="flex gap-5">
-      <ul>
+  return (
+    <div>
+      <ul className="flex flex-col gap-3">
         {medicines.map((medicine, index) => {
           return (
-            <li className="underline list-disc" key={index}>{medicine.name}</li>
-          )
+            <div className="flex flex-col gap-1">
+              <li className="underline list-disc text-xl" key={index}>
+                {medicine.name}
+              </li>
+
+              <p className="">{medicine.description}</p>
+            </div>
+          );
         })}
       </ul>
     </div>
-  )
+  );
 }
