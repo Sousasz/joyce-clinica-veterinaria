@@ -2,12 +2,20 @@ import { CallToAction } from "./call-to-action";
 import { IoIosMenu } from "react-icons/io";
 import DogImage from "../../../public/assets/logo.svg?react";
 import { UserSignIn } from "./user-signin";
+import { useNavigate } from "react-router";
 
 import { useState } from "react";
 import { links } from "@/constants/links";
 
 export function Header() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
+  const navigate = useNavigate()
+
+  function directionToPageSection() {
+    links.map((item) => {
+      return navigate("/" + item.id)
+    })
+  }
 
   function onClickToOpenTheMenu() {
     setIsOpenMenu(!isOpenMenu);
@@ -23,7 +31,7 @@ export function Header() {
               {links.map((item, index) => {
                 return (
                   <li key={index}>
-                    <a href={`#${item.id}`}>{item.link}</a>
+                    <a className="cursor-pointer" onClick={directionToPageSection}>{item.link}</a>
                   </li>
                 );
               })}

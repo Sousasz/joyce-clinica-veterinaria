@@ -3,7 +3,7 @@ import deviseLogo from "../../../public/company.jpg";
 export function Company() {
   return (
     <section className="pt-10 flex flex-col justify-center items-center">
-      <p className="text-lg">
+      <p className="text-lg text-center">
         Desenvolvido por{" "}
         <a href="#" className="underline">
           Devise

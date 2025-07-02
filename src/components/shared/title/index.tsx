@@ -9,7 +9,7 @@ type TitleProps = {
 export function Title({ textInBold, text, className }: TitleProps) {
   return (
     <div className="max-w-full flex justify-center">
-      <h3 className={`text-2xl relative text-center bg-white px-5 p-1 w-fit h-fit shadow-md ${className}`}>
+      <h3 className={`text-2xl relative text-center ${className}`}>
         <span className="font-bold text-green-light ">
           {textInBold}
         </span>{" "}
