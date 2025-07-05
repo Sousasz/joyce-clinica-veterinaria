@@ -1,7 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import { UserProfile } from './pages/user-profile/index.tsx'
+import { User } from './pages/user/index.tsx'
+import { Adm } from './pages/adm/index.tsx'
 import "./global.css"
 import App from './app.tsx'
 
@@ -12,8 +13,12 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: '/profile',
-    element: <UserProfile />,
+    path: '/usuário',
+    element: <User />,
+  },
+  {
+    path: '/adm',
+    element: <Adm />,
   }
 ])
 

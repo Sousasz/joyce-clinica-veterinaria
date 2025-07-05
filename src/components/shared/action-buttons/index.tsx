@@ -1,4 +1,3 @@
-import { GoPencil } from "react-icons/go";
 
 type ActionButtonProps = {
   children: React.ReactNode;
@@ -11,13 +10,3 @@ export function ActionButton({ children }: ActionButtonProps) {
     </button>
   );
 }
-
-export function ButtonIcon() {
-  return (
-    <button className="cursor-pointer">
-      <GoPencil />
-    </button>
-  );
-}
-
-ActionButton.ButtonIcon = ButtonIcon;

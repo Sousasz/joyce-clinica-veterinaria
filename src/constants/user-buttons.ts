@@ -1,14 +1,14 @@
 import { GoPencil } from "react-icons/go";
 import { IconType } from "react-icons/lib";
 
-type buttonProps = {
+type userButtonProps = {
     text: string;
     icon: IconType
     hidden: boolean
 }[]
 
 
-export const buttons:buttonProps = [
+export const userButtons:userButtonProps = [
     {
         text: "Editar informações",
         icon: GoPencil,

@@ -1,7 +1,8 @@
 import { Title } from "@/components/shared/title";
 import { consults } from "@/constants/consults";
+import { UserRateModal } from "./user-rate-modal";
 
-export function Consults() {
+export function UserConsults() {
   return (
     <div className="flex flex-col gap-10">
       <Title textInBold="Suas" text="Consultas" />
@@ -35,9 +36,7 @@ export function Consults() {
                   </span>
                 </div>
 
-                <button className="underline cursor-pointer max-[330px]:text-start max-[330px]:w-fit">
-                  Avaliar Consulta
-                </button>
+                <UserRateModal />
               </div>
             </div>
           );
