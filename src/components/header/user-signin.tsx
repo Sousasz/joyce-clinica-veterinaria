@@ -1,6 +1,7 @@
 import avatarImage from "../../../public/avatar.jpg";
-import { InputArea } from "../modals/scheduling-modal/input-area";
-import { SmallText } from "../shared/small-text";
+import { InputArea } from "../../modals/booking-modal/input-area";
+import { SmallText } from "../ui/small-text";
+import { Link } from "react-router-dom";
 
 import {
   Dialog,
@@ -8,7 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
+} from "@/components/ui/shadcn/dialog";
 
 export function UserSignIn() {
   return (
@@ -39,8 +40,12 @@ export function UserSignIn() {
               </div>
 
               <SmallText>
-                <p className="font-medium underline">Esqueceu a senha?</p>
-                <p className="font-medium underline">Não tem um login? Cadastre-se</p>
+                <Link to="/" className="font-medium underline">
+                  Esqueceu a senha?
+                </Link>
+                <Link to="/cadastrar" className="font-medium underline">
+                  Não tem um login? Cadastre-se
+                </Link>
               </SmallText>
             </div>
 

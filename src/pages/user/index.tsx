@@ -1,8 +1,8 @@
-import { Title } from "@/components/shared/title";
+import { Title } from "@/components/ui/title";
 import { Header } from "@/components/header";
-import { ActionButton } from "@/components/shared/action-buttons";
+import { ActionButton } from "@/components/ui/buttons-of-action";
 import { userButtons } from "@/constants/user-buttons";
-import { UserConsults } from "./user-consults";
+import { UserConsult } from "./user-consult";
 import { Footer } from "@/components/footer";
 
 export function User() {
@@ -12,7 +12,7 @@ export function User() {
       <div className="flex flex-col max-w-screen mx-20 my-10 gap-14">
         <div className="flex flex-col gap-10">
           <Title textInBold="Editar" text="Informações" />
-          
+
           <div className="flex flex-col gap-8 w-fit max-[600px]:items-center max-[600px]:w-full">
             {userButtons.map((Button, index) => {
               return (
@@ -28,7 +28,7 @@ export function User() {
             })}
           </div>
 
-          <UserConsults />
+          <UserConsult />
         </div>
       </div>
 

@@ -1,21 +1,18 @@
-import { Hero } from "./hero";
-import { OurServices } from "./our-services";
-import { Scheduling } from "./scheduling";
-import { Reviews } from "./reviews";
-import { Areas } from "./areas";
-import { Chatbot } from "./chatbot";
+import { Hero } from "./hero/hero";
+import { OurServices } from "./carousel/carousel-services";
+import { Booking } from "./booking/booking";
+import { Ratings } from "./rating/ratings";
+import { Regions } from "./regions/regions";
+import { Chatbot } from "./chatbot/chatbot";
 
 export function Main() {
-
-
-
   return (
     <main className="flex flex-col items-center gap-36 p-8" id="home">
       <Hero />
       <OurServices />
-      <Scheduling />
-      <Reviews />
-      <Areas />
+      <Booking />
+      <Ratings />
+      <Regions />
       <Chatbot />
     </main>
   );

@@ -1,8 +1,8 @@
-import { Title } from "@/components/shared/title";
+import { Title } from "@/components/ui/title";
 import { Header } from "@/components/header";
-import { ActionButton } from "../../components/shared/action-buttons";
+import { ActionButton } from "@/components/ui/buttons-of-action";
 import { admButtons } from "@/constants/adm-buttons";
-import { AdmConsults } from "./adm-consults";
+import { BookedConsults } from "./booked-consults";
 import { Footer } from "@/components/footer";
 
 export function Adm() {
@@ -24,7 +24,7 @@ export function Adm() {
             })}
           </div>
 
-          <AdmConsults />
+          <BookedConsults />
         </div>
       </div>
 
