@@ -1,4 +1,4 @@
-import { InputsSection } from "./inputs-section";
+import { BookingInputsSection } from "./booking-inputs-section";
 import { SignUpPetNotification } from "./signup-pet-notification";
 import { Title } from "@/components/ui/title";
 
@@ -11,7 +11,7 @@ export function BookingSheet() {
         text="Agendamento"
       />
 
-      <InputsSection />
+      <BookingInputsSection />
 
       <SignUpPetNotification />
     </div>

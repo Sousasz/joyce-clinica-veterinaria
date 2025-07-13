@@ -1,6 +1,6 @@
 import { vacines } from "@/constants/vacines";
 
-export function VacinesMainContent() {
+export function VacinesList() {
   return (
     <div>
       <ul className="flex flex-col gap-4">

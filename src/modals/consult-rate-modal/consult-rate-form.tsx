@@ -1,8 +1,9 @@
 import Rating from "react-rating";
 import { IoStarOutline } from "react-icons/io5";
 import { IoStarSharp } from "react-icons/io5";
+import { Touchable } from "@/components/ui/touchable";
 
-export function ConsultModalContent() {
+export function ConsultRateForm() {
   return (
     <div className="flex flex-col justify-center items-center gap-5 font-poppins">
       <div className="flex flex-col w-full">
@@ -20,9 +21,7 @@ export function ConsultModalContent() {
         name="description"
       ></textarea>
 
-      <button className="bg-white text-black font-medium px-6 shadow-default h-10 rounded-full cursor-pointer font-poppins">
-        Publicar
-      </button>
+      <Touchable>Publicar</Touchable>
     </div>
   );
 }

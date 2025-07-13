@@ -1,4 +1,4 @@
-import { MedicinesInjectablesContent } from "./medicines-injectables-content";
+import { MedicinesInjectablesList } from "./medicines-injectables-list";
 
 import { DialogContent, DialogHeader } from "@/components/ui/shadcn/dialog";
 
@@ -11,7 +11,7 @@ export function MedicinesInjectablesModal() {
           MEDICAMENTOS
         </DialogHeader>
 
-        <MedicinesInjectablesContent />
+        <MedicinesInjectablesList />
       </div>
     </DialogContent>
   );

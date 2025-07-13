@@ -1,7 +1,6 @@
 import avatarImage from "../../../public/avatar.jpg";
-import { InputArea } from "../../modals/booking-modal/input-area";
-import { SmallText } from "../ui/small-text";
-import { Link } from "react-router-dom";
+import { UserSignInForm } from "./user-signin-form";
+import { Touchable } from "@/components/ui/touchable";
 
 import {
   Dialog,
@@ -33,25 +32,9 @@ export function UserSignIn() {
               </DialogTitle>
             </DialogHeader>
 
-            <div className="flex flex-col justify-center items-center gap-5">
-              <div className="flex flex-col gap-3 w-[90%]">
-                <InputArea name="user" placeholder="Usuário: " />
-                <InputArea name="password" placeholder="Senha: " />
-              </div>
+            <UserSignInForm />
 
-              <SmallText>
-                <Link to="/" className="font-medium underline">
-                  Esqueceu a senha?
-                </Link>
-                <Link to="/cadastrar" className="font-medium underline">
-                  Não tem um login? Cadastre-se
-                </Link>
-              </SmallText>
-            </div>
-
-            <button className="bg-white text-black font-medium px-6 shadow-default h-10 rounded-full cursor-pointer font-poppins">
-              Entrar
-            </button>
+            <Touchable>Entrar</Touchable>
           </div>
         </DialogContent>
       </form>

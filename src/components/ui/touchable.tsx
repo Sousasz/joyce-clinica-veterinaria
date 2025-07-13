@@ -1,23 +1,31 @@
-type TouchableProps = {
-  children: React.ReactNode;
-};
+import { ComponentProps, ReactNode } from "react";
+import { tv, VariantProps } from "tailwind-variants";
 
-export function Touchable({ children }: TouchableProps) {
+const touchableVariants = tv({
+  base: "shadow-default cursor-pointer rounded-full font-poppins",
+
+  variants: {
+    buttonType: {
+      primary: "bg-white text-black font-medium px-6 h-10",
+      secondary: "bg-green-light px-12 h-20 text-white font-semibold uppercase",
+    },
+  },
+
+  defaultVariants: {
+    buttonType: "primary",
+  },
+});
+
+interface TouchableProps
+  extends ComponentProps<"button">,
+    VariantProps<typeof touchableVariants> {
+  children: ReactNode;
+}
+
+export function Touchable({ children, buttonType, ...props }: TouchableProps) {
   return (
-    <button className="w-full bg-white text-black font-medium px-6 shadow-default h-10 rounded-full cursor-pointer font-poppins">
+    <button {...props} className={touchableVariants({ buttonType })}>
       {children}
     </button>
   );
 }
-
-// export function Touchable({ children, className, ...rest }: TouchableProps) {
-//   return (
-//     <button
-//       {...rest}
-//       className={` bg-green-light rounded-full px-12 h-20
-//     text-white shadow-default cursor-pointer font-semibold uppercase ${className}`}
-//     >
-//       {children}
-//     </button>
-//   );
-// }

@@ -6,7 +6,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/shadcn/dialog";
 
-import { ConsultModalContent } from "./consult-modal-content";
+import { ConsultRateForm } from "./consult-rate-form";
 
 export function ConsultRateModal() {
   return (
@@ -26,7 +26,7 @@ export function ConsultRateModal() {
               </DialogTitle>
             </DialogHeader>
 
-            <ConsultModalContent />
+            <ConsultRateForm />
           </div>
         </DialogContent>
       </form>

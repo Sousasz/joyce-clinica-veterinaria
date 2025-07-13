@@ -14,8 +14,6 @@ export function Title({ textInBold, text, className }: TitleProps) {
           {textInBold}
         </span>{" "}
         {text}
-        
-        {/* <TitleAsset className="relative" /> */}
       </h3>
     </div>
   );

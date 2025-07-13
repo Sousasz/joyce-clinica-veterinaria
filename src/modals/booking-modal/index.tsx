@@ -1,5 +1,5 @@
 import { Touchable } from "@/components/ui/touchable";
-import { BookingMainContent } from "./booking-main-content";
+import { BookingForm } from "./booking-form";
 import {
   Dialog,
   DialogContent,
@@ -13,7 +13,9 @@ export function BookingModal() {
     <Dialog>
       <form>
         <DialogTrigger asChild>
-          <Touchable>Clique aqui para agendar uma consulta</Touchable>
+          <Touchable buttonType="secondary">
+            Clique aqui para agendar uma consulta
+          </Touchable>
         </DialogTrigger>
 
         <DialogContent className="sm:max-w-[90%] shadow-default h-[90%] bg-green-light bg-[url('/public/background-image.svg')] bg-cover bg-center bg-no-repeat">
@@ -24,7 +26,7 @@ export function BookingModal() {
               </DialogTitle>
             </DialogHeader>
 
-            <BookingMainContent />
+            <BookingForm />
           </div>
         </DialogContent>
       </form>

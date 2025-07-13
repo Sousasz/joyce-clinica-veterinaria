@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/shadcn/dialog";
 
 import { Title } from "@/components/ui/title";
-import { DetailsModalContent } from "./details-modal-content";
+import { ConsultDetailsForm } from "./consult-details-form";
 
 export function ConsultDetailsModal() {
   return (
@@ -27,7 +27,7 @@ export function ConsultDetailsModal() {
               </DialogTitle>
             </DialogHeader>
 
-            <DetailsModalContent />
+            <ConsultDetailsForm />
           </div>
         </DialogContent>
       </form>

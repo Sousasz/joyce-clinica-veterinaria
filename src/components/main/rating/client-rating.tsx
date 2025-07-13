@@ -7,10 +7,10 @@ import { ratings } from "@/constants/ratings";
 
 export function ClientRating() {
   return (
-    <div className="flex justify-center gap-5 max-[415px]:w-80 ">
+    <>
       {ratings.map((rating, index) => {
         return (
-          <>
+          <div className="flex justify-center gap-5 max-[415px]:w-80 ">
             <img
               key={index}
               className="h-min w-52 rounded-full"
@@ -30,9 +30,9 @@ export function ClientRating() {
 
               <Comment>{rating.comment}</Comment>
             </div>
-          </>
+          </div>
         );
       })}
-    </div>
+    </>
   );
 }

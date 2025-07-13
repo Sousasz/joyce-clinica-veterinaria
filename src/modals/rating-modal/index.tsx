@@ -1,5 +1,5 @@
 import { Touchable } from "@/components/ui/touchable";
-import { RatingMainContent } from "./rating-main-content";
+import { RatingsList } from "./ratings-list";
 import {
   Dialog,
   DialogContent,
@@ -13,7 +13,7 @@ export function RatingModal() {
     <Dialog>
       <form>
         <DialogTrigger asChild>
-          <Touchable>Ver mais avaliações</Touchable>
+          <Touchable buttonType="secondary">Ver mais avaliações</Touchable>
         </DialogTrigger>
 
         <DialogContent className="sm:max-w-[90%] shadow-default h-[90%] bg-green-light">
@@ -26,7 +26,7 @@ export function RatingModal() {
               />
             </DialogHeader>
 
-            <RatingMainContent />
+            <RatingsList />
           </div>
         </DialogContent>
       </form>
