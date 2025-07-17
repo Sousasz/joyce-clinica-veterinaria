@@ -1,10 +1,10 @@
 import { Touchable } from "@/components/ui/touchable";
-import { SignUpInputsSection } from "./signup-inputs-section";
+import { SignUpUserInputsSection } from "./signup-user-inputs-section";
 
-export function SignUpForm() {
+export function SignUpUserForm() {
   return (
     <div className="flex flex-col justify-center w-full gap-8 ">
-      <SignUpInputsSection />
+      <SignUpUserInputsSection />
       <Touchable>Concluído</Touchable>
     </div>
   );

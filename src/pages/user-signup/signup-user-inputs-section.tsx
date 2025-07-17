@@ -1,6 +1,6 @@
 import { Input } from "@/components/ui/shadcn/input";
 
-export function SignUpInputsSection() {
+export function SignUpUserInputsSection() {
   return (
     <div className="flex justify-center">
       <div className="flex flex-col gap-3 w-full">

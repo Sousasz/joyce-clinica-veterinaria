@@ -13,7 +13,7 @@ export function BookingInputsSection() {
         <Input name="breed" placeholder="Raça" />
 
         <div className="flex gap-2">
-          <Input name="neutered-or-spayed" placeholder="Castrado?" />
+          <Input name="spayed" placeholder="Castrado?" />
 
           <Input name="male-or-female" placeholder="Sexo" />
         </div>

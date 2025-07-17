@@ -1,6 +1,6 @@
 import { ClientRating } from "./client-rating";
 import { Title } from "../../ui/title";
-import { RatingModal } from "../../../modals/rating-modal/index";
+import { RatingModal } from "../../../modals/ratings-modal/index";
 
 export function Ratings() {
   return (
