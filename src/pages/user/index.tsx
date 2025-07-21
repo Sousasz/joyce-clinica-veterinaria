@@ -1,6 +1,6 @@
 import { Title } from "@/components/ui/title";
 import { Header } from "@/components/header";
-import { ActionButton } from "@/components/ui/buttons-of-action";
+import { ButtonOfAction } from "@/components/ui/button-of-action";
 import { userButtons } from "@/constants/user-buttons";
 import { UserConsult } from "./user-consult";
 import { Footer } from "@/components/footer";
@@ -16,14 +16,14 @@ export function User() {
           <div className="flex flex-col gap-8 w-fit max-[600px]:items-center max-[600px]:w-full">
             {userButtons.map((Button, index) => {
               return (
-                <ActionButton key={index}>
+                <ButtonOfAction key={index}>
                   <span>{Button.text}</span>
                   {Button.hidden ? (
                     <Button.icon className="hidden" />
                   ) : (
                     <Button.icon className="block" />
                   )}
-                </ActionButton>
+                </ButtonOfAction>
               );
             })}
           </div>

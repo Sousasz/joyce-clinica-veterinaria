@@ -4,10 +4,13 @@ export function Description() {
   return (
     <>
       <Title className="text-white" textInBold="Descrição" />
-      <textarea
-        className="w-full h-62 border-2 border-white shadow-default rounded-xl outline-none font-poppins p-2"
-        name="description"
-      ></textarea>
+      <p className="max-w-[30rem] text-start my-2">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
+        sunt odio non accusamus vero esse nam vitae ex repellendus, a minus rem
+        voluptates? Exercitationem asperiores, voluptas, laborum quae hic nisi
+        labore fuga totam aperiam non facere. Ad maiores sint quod quae
+        perferendis soluta? 
+      </p>
     </>
   );
 }

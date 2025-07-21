@@ -1,9 +1,10 @@
 import { Title } from "@/components/ui/title";
 import { Header } from "@/components/header";
-import { ActionButton } from "@/components/ui/buttons-of-action";
+
 import { admButtons } from "@/constants/adm-buttons";
 import { BookedConsults } from "./booked-consults";
 import { Footer } from "@/components/footer";
+import { Buttons } from "./buttons";
 
 export function Adm() {
   return (
@@ -16,10 +17,9 @@ export function Adm() {
           <div className="flex flex-col gap-8 w-fit max-[600px]:items-center max-[600px]:w-full">
             {admButtons.map((Button, index) => {
               return (
-                <ActionButton key={index}>
-                  <span>{Button.text}</span>
-                  <Button.icon />
-                </ActionButton>
+                <div key={index}>
+                  <Buttons Button={Button} />
+                </div>
               );
             })}
           </div>

@@ -1,4 +1,4 @@
-import { ClientRating } from "@/components/main/rating/client-rating";
+import { ClientRating } from "@/components/main/ratings/client-rating";
 
 export function RatingsList() {
   return (

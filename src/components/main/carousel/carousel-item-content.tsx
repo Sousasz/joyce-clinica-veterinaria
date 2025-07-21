@@ -5,9 +5,9 @@ import { VacinesModal } from "../../../modals/vacines-modal/index";
 import { Dialog, DialogTrigger } from "@/components/ui/shadcn/dialog";
 
 type Service = {
-  imgUrl: string,
-  type: string
-}
+  imgUrl: string;
+  type: string;
+};
 
 type CarouselItemContentProps = {
   service: Service;
@@ -16,12 +16,11 @@ type CarouselItemContentProps = {
 const modalComponents: Record<string, JSX.Element> = {
   "Medicação": <MedicinesModal />,
   "Medicação Injetável": <MedicinesInjectablesModal />,
-  "Vacinação": <VacinesModal />
-}
+  "Vacinação": <VacinesModal />,
+};
 
 export function CarouselItemContent({ service }: CarouselItemContentProps) {
-
-  const ModalComponent = modalComponents[service.type] || null
+  const ModalComponent = modalComponents[service.type] || null;
 
   return (
     <>

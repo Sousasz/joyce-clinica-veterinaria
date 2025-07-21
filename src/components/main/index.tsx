@@ -1,7 +1,7 @@
 import { Hero } from "./hero/hero";
 import { OurServices } from "./carousel/carousel-services";
 import { Booking } from "./booking/booking";
-import { Ratings } from "./rating/ratings";
+import { Ratings } from "./ratings/ratings";
 import { Regions } from "./regions/regions";
 import { Chatbot } from "./chatbot/chatbot";
 
