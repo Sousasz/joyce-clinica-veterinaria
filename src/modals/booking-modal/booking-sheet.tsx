@@ -5,12 +5,7 @@ import { Title } from "@/components/ui/title";
 export function BookingSheet() {
   return (
     <div className="grid gap-10">
-      <Title
-        className="font-poppins"
-        textInBold="Ficha do"
-        text="Agendamento"
-      />
-
+      <Title className="text-emerald-900 ">Ficha do agendamento</Title>
       <BookingInputsSection />
 
       <SignUpPetNotification />

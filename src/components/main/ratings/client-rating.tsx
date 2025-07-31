@@ -10,10 +10,9 @@ export function ClientRating() {
     <>
       {ratings.map((rating, index) => {
         return (
-          <div className="flex justify-center gap-5 max-[415px]:w-80 overflow-y-scroll">
+          <div key={index} className="flex justify-center gap-5 max-[415px]:w-80 ">
             <img
-              key={index}
-              className="h-min w-36 rounded-full"
+              className="h-min w-28 rounded-full"
               src={avatarImage}
               alt="Imagem do cliente"
             />

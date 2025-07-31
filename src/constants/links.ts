@@ -15,7 +15,7 @@ export const links: LinkProps = [
     link: 'Nossos Serviços'
   },
   {
-    id: 'scheduling' ,
+    id: 'booking' ,
     link: 'Agendamento'
   },
   {

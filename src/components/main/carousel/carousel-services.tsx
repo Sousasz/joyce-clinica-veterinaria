@@ -11,7 +11,7 @@ export function OurServices() {
   return (
     <section className="flex flex-col items-center gap-10" id="services">
       <div>
-        <Title textInBold="Nossos" text="serviços" />
+        <Title>Nossos serviços</Title>
       </div>
 
       <Carousel>

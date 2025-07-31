@@ -8,7 +8,7 @@ export function Booking() {
       className="flex flex-col items-center gap-10 w-full"
       id="booking"
     >
-      <Title textInBold="Faça seu" text="agendamento" />
+      <Title>Faça seu agendamento</Title>
 
       <About />
 

@@ -24,7 +24,7 @@ export function Header() {
               {links.map((item, index) => {
                 return (
                   <li key={index}>
-                    <Link to={`/#${item.id}`}>{item.link}</Link>
+                    <a href={`/#${item.id}`}>{item.link}</a>
                   </li>
                 );
               })}

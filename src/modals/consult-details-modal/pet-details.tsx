@@ -2,8 +2,8 @@ import { Title } from "@/components/ui/title";
 
 export function PetDetails() {
   return (
-    <div>
-      <Title className="text-white" textInBold="Animal" />
+    <div className="flex flex-col gap-4 text-center">
+      <Title className="bg-white p-1" textInBold="Animal" />
 
       <div className="flex flex-col gap-2">
         <img src="" alt="" />

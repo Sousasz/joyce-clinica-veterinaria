@@ -20,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/adm',
-    element: <Adm />,
+    element: <Adm />, 
   },
   {
     path: '/adicionar-medicamento',

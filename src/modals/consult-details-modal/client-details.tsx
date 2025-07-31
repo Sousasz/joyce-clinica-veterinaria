@@ -2,8 +2,8 @@ import { Title } from "@/components/ui/title";
 
 export function ClientDetails() {
   return (
-    <div className="flex flex-col items-center">
-      <Title className="text-white" textInBold="Cliente" />
+    <div className="flex flex-col gap-4 text-center">
+      <Title className="bg-white p-1" textInBold="Cliente" />
 
       <div className="flex flex-col gap-2">
         <img src="" alt="" />

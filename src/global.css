@@ -7,6 +7,22 @@
   min-width: 0;
 }
 
+@layer utilities {
+  .scrollbar {
+    scrollbar-width: thin; /* Largura */
+    scrollbar-color: #888 #f1f1f1; /* Cor do polegar e da track */
+  }
+  .scrollbar-thumb {
+    background-color: #888; /* Cor do polegar */
+    border-radius: 4px; /* Bordas arredondadas */
+  }
+  .scrollbar-track {
+    background-color: #f1f1f1; /* Cor do fundo */
+  }
+}
+
+
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
