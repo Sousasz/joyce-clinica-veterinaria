@@ -1,4 +1,11 @@
 
+import medicineImage from "../../public/services-images/medicine.jpg"
+import clinicalConsutationImage from "../../public/services-images/clinical-consultation.jpg"
+import injectableMedicineImage from "../../public/services-images/injectable-medicine.jpg"
+import preventiveConsultaionImage from "../../public/services-images/preventive-consultation.jpg"
+import vaccinationImage from "../../public/services-images/vaccination.jpg"
+
+
 type CarouselProps = {
   imgUrl: string,
   type: string
@@ -6,23 +13,23 @@ type CarouselProps = {
 
 export const carousel: CarouselProps = [
   {
-    imgUrl: "../../public/services-images/medicine.jpg",
+    imgUrl: medicineImage,
     type: "Medicação"
   },
   {
-    imgUrl: "../../public/services-images/clinical-consultation.jpg",
+    imgUrl: clinicalConsutationImage,
     type: "Consulta Clínica"
   },
   {
-    imgUrl: "../../public/services-images/injectable-medicine.jpg",
+    imgUrl: injectableMedicineImage,
     type: "Medicação Injetável"
   },
   {
-    imgUrl: "../../public/services-images/preventive-consultation.jpg",
+    imgUrl: preventiveConsultaionImage,
     type: "Consulta Preventiva"
   },
   {
-    imgUrl: "../../public/services-images/vaccination.jpg",
+    imgUrl: vaccinationImage,
     type: "Vacinação"
   },
 ]
