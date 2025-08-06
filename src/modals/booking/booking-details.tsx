@@ -4,15 +4,15 @@ import { TextArea } from "@/components/ui/text-area";
 
 export function BookingDetails() {
   return (
-    <div className="flex flex-col justify-center gap-20">
+    <div className="flex flex-col justify-center gap-14">
       <div className="flex flex-col gap-5">
-        <Title className="text-emerald-900">Descrição breve</Title>
+        <Title>Descrição breve</Title>
 
         <TextArea /> 
       </div>
 
       <div className="flex flex-col gap-5">
-        <Title className="text-emerald-900">Data e hora</Title>
+        <Title>Data e hora</Title>
         <div className="text-center">Calendar</div>
       </div>
 

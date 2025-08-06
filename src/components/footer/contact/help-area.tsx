@@ -1,10 +1,10 @@
-import { Subtitle } from "@/components/ui/subtitle";
+import { GrayText } from "@/components/ui/gray-text";
 import { HelpAreaLinks } from "./help-area-links";
 
 export function HelpArea() {
   return (
     <div className="flex flex-col gap-3">
-      <Subtitle>AJUDA E CONTATO</Subtitle>
+      <GrayText>AJUDA E CONTATO</GrayText>
       <HelpAreaLinks />
     </div>
   );

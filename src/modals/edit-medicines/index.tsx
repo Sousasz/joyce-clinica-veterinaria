@@ -1,5 +1,5 @@
-import { MedicinesList } from "../medicines-modal/medicines-list";
-import { MedicinesInjectablesList } from "../medicines-injectables-modal/medicines-injectables-list";
+import { MedicinesList } from "../medicines/medicines-list";
+import { MedicinesInjectablesList } from "../medicines-injectables/medicines-injectables-list";
 import { Touchable } from "@/components/ui/touchable";
 
 import {

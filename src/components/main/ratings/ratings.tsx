@@ -1,6 +1,6 @@
 import { ClientRating } from "./client-rating";
 import { Title } from "../../ui/title";
-import { RatingModal } from "../../../modals/ratings-modal/index";
+import { RatingModal } from "../../../modals/ratings/index";
 import { Touchable } from "@/components/ui/touchable";
 import { Dialog, DialogTrigger } from "@/components/ui/shadcn/dialog";
 
@@ -12,7 +12,7 @@ export function Ratings() {
       <div className="gap-20 grid place-items-center grid-cols-[repeat(auto-fill,_minmax(390px,_1fr))]">
         <ClientRating />
       </div>
-      
+
       <Dialog>
         <form>
           <DialogTrigger asChild>

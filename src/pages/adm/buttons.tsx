@@ -1,7 +1,7 @@
 import { ButtonOfAction } from "@/components/ui/button-of-action";
 import { IconType } from "react-icons/lib";
-import { AddMedicinesModal } from "@/modals/add-medicines-modal";
-import { RatingModal } from "@/modals/ratings-modal";
+import { AddMedicinesModal } from "@/modals/add-medicines";
+import { RatingModal } from "@/modals/ratings";
 
 import { Dialog, DialogTrigger } from "@/components/ui/shadcn/dialog";
 

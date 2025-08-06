@@ -6,7 +6,7 @@ const touchableVariants = tv({
 
   variants: {
     buttonType: {
-      primary: "bg-white text-black text-sm font-medium m-6 h-10",
+      primary: "bg-white text-black text-sm font-medium w-full py-3",
       secondary: "bg-green-light px-12 h-20 text-white font-semibold uppercase",
     },
   },

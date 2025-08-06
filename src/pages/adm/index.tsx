@@ -12,7 +12,7 @@ export function Adm() {
       <Header />
       <div className="flex flex-col max-w-screen mx-20 my-10 gap-14">
         <div className="flex flex-col gap-10">
-          <Title textInBold="Setor" text="administrativo" />
+          <Title>Setor administrativo</Title>
 
           <div className="flex flex-col gap-8 w-fit max-[600px]:items-center max-[600px]:w-full">
             {admButtons.map((Button, index) => {

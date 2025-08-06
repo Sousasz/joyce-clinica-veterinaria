@@ -1,6 +1,6 @@
 import { About } from "./about-service";
 import { Title } from "../../ui/title";
-import { BookingModal } from "../../../modals/booking-modal/index";
+import { BookingModal } from "../../../modals/booking/index";
 
 export function Booking() {
   return (

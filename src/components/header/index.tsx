@@ -1,7 +1,7 @@
 import { CallToAction } from "./call-to-action";
 import { IoIosMenu } from "react-icons/io";
 import DogImage from "../../../public/assets/logo.svg?react";
-import { UserSignIn } from "@/modals/user-signin-modal";
+import { UserSignIn } from "@/modals/user-signin";
 import { Link } from "react-router-dom";
 
 import { useState } from "react";

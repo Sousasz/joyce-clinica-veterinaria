@@ -1,9 +1,11 @@
 import { Title } from "@/components/ui/title";
 import { Header } from "@/components/header";
+import { EditClientInformations } from "@/modals/edit-client-informations";
 import { ButtonOfAction } from "@/components/ui/button-of-action";
-import { userButtons } from "@/constants/user-buttons";
 import { UserConsult } from "./user-consult";
 import { Footer } from "@/components/footer";
+
+import { GoPencil } from "react-icons/go";
 
 export function User() {
   return (
@@ -11,21 +13,23 @@ export function User() {
       <Header />
       <div className="flex flex-col max-w-screen mx-20 my-10 gap-14">
         <div className="flex flex-col gap-10">
-          <Title textInBold="Editar" text="Informações" />
+          <Title>Editar informações</Title>
 
           <div className="flex flex-col gap-8 w-fit max-[600px]:items-center max-[600px]:w-full">
-            {userButtons.map((Button, index) => {
-              return (
-                <ButtonOfAction key={index}>
-                  <span>{Button.text}</span>
-                  {Button.hidden ? (
-                    <Button.icon className="hidden" />
-                  ) : (
-                    <Button.icon className="block" />
-                  )}
-                </ButtonOfAction>
-              );
-            })}
+            <EditClientInformations />
+
+            <ButtonOfAction>
+              <span>Editar pets</span>
+              <GoPencil />
+            </ButtonOfAction>
+
+            <ButtonOfAction>
+              <span>Excluir conta</span>
+            </ButtonOfAction>
+
+            <ButtonOfAction>
+              <span>Sair da conta</span>
+            </ButtonOfAction>
           </div>
 
           <UserConsult />

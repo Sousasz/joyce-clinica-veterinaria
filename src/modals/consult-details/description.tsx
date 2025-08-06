@@ -1,9 +1,9 @@
-import { Title } from "@/components/ui/title";
+import { Subtitle } from "@/components/ui/subtitle";
 
 export function Description() {
   return (
     <div className="flex flex-col gap-4">
-      <Title className="bg-white p-1" textInBold="Descrição" />
+      <Subtitle>Descrição</Subtitle>
       <p className="max-w-[30rem] text-start my-2">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis
         sunt odio non accusamus vero esse nam vitae ex repellendus, a minus rem

@@ -1,6 +1,6 @@
-import { MedicinesModal } from "../../../modals/medicines-modal/index";
-import { MedicinesInjectablesModal } from "../../../modals/medicines-injectables-modal/index";
-import { VacinesModal } from "../../../modals/vacines-modal/index";
+import { MedicinesModal } from "../../../modals/medicines/index";
+import { MedicinesInjectablesModal } from "../../../modals/medicines-injectables/index";
+import { VacinesModal } from "../../../modals/vacines/index";
 
 import { Dialog, DialogTrigger } from "@/components/ui/shadcn/dialog";
 
@@ -14,9 +14,9 @@ type CarouselItemContentProps = {
 };
 
 const modalComponents: Record<string, JSX.Element> = {
-  "Medicação": <MedicinesModal />,
+  Medicação: <MedicinesModal />,
   "Medicação Injetável": <MedicinesInjectablesModal />,
-  "Vacinação": <VacinesModal />,
+  Vacinação: <VacinesModal />,
 };
 
 export function CarouselItemContent({ service }: CarouselItemContentProps) {

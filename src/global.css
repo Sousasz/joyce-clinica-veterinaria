@@ -7,22 +7,6 @@
   min-width: 0;
 }
 
-@layer utilities {
-  .scrollbar {
-    scrollbar-width: thin; /* Largura */
-    scrollbar-color: #888 #f1f1f1; /* Cor do polegar e da track */
-  }
-  .scrollbar-thumb {
-    background-color: #888; /* Cor do polegar */
-    border-radius: 4px; /* Bordas arredondadas */
-  }
-  .scrollbar-track {
-    background-color: #f1f1f1; /* Cor do fundo */
-  }
-}
-
-
-
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
@@ -30,6 +14,7 @@
 @theme {
   --font-poppins: 'Poppins', sans-serif;
   --color-green-light: oklch(0.86 0.0703 164.5);
+  --color-green-dark: oklch(0.4703 0.0703 164.5);
   --color-gray-base: #8c8c8c;
   --color-gray-light: oklch(0.8853 0 0);
   --shadow-default: 5px 5px 10px 5px rgb(0 0 0 / 0.15)

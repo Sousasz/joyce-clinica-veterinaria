@@ -14,7 +14,7 @@ export function UserSignInForm() {
         <Link to="/" className="font-medium underline">
           Esqueceu a senha?
         </Link>
-        <Link to="/cadastrar" className="font-medium underline">
+        <Link to="/cadastrar-usuario" className="font-medium underline">
           Não tem um login? Cadastre-se
         </Link>
       </SmallText>
