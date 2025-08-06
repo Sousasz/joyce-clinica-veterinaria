@@ -2,7 +2,6 @@ import avatarImage from "../../../../public/avatar.jpg";
 import Rating from "react-rating";
 import { IoStarOutline } from "react-icons/io5";
 import { IoStarSharp } from "react-icons/io5";
-import { Comment } from "./comment";
 import { ratings } from "@/constants/ratings";
 
 export function ClientRating() {
@@ -10,7 +9,7 @@ export function ClientRating() {
     <>
       {ratings.map((rating, index) => {
         return (
-          <div key={index} className="flex justify-center gap-5 max-[415px]:w-80 ">
+          <div key={index} className="flex justify-center gap-5  ">
             <img
               className="h-min w-28 rounded-full"
               src={avatarImage}
@@ -27,7 +26,7 @@ export function ClientRating() {
                 readonly
               />
 
-              <Comment>{rating.comment}</Comment>
+              <p>{rating.comment}</p>
             </div>
           </div>
         );

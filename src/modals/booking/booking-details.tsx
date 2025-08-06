@@ -1,11 +1,10 @@
 import { Title } from "@/components/ui/title";
-import { Touchable } from "@/components/ui/touchable";
 import { TextArea } from "@/components/ui/text-area";
 
 export function BookingDetails() {
   return (
-    <div className="flex flex-col justify-center gap-14">
-      <div className="flex flex-col gap-5">
+    <div className="flex flex-col justify-center items-center gap-14 w-full">
+      <div className="flex flex-col gap-5 w-[80%]">
         <Title>Descrição breve</Title>
 
         <TextArea /> 
@@ -15,8 +14,6 @@ export function BookingDetails() {
         <Title>Data e hora</Title>
         <div className="text-center">Calendar</div>
       </div>
-
-      <Touchable>Concluir agendamento</Touchable>
     </div>
   );
 }
