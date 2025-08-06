@@ -1,7 +1,7 @@
 
 type FormFieldProps = {
   fieldType: string,
-  fieldValue: string | number,
+  fieldValue: string | number | boolean,
   className?: string
 }
 

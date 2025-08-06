@@ -3,7 +3,7 @@ import { FormField } from "@/components/ui/form-field";
 
 export function ClientDetails() {
   return (
-    <div className="flex flex-col gap-4 text-center">
+    <div className="flex flex-col gap-4">
       <Subtitle>Cliente</Subtitle>
 
       <div className="flex justify-center font-poppins">
@@ -15,18 +15,11 @@ export function ClientDetails() {
             <FormField fieldType="Telefone" fieldValue={999999999} />
             <FormField fieldType="CEP" fieldValue={9999999} />
 
-            <div className="flex max-[990px]:flex-col gap-2">
-              <FormField fieldType="Número" fieldValue={99} />
-              <FormField fieldType="Complemento" fieldValue="apto 999" />
-            </div>
+            <FormField fieldType="Número" fieldValue={99} />
+            <FormField fieldType="Complemento" fieldValue="apto 999" />
 
-            <div className="flex max-[990px]:flex-col gap-2">
-              <FormField
-                fieldType="Endereço"
-                fieldValue="Rua Avenida Avenida"
-              />
-              <FormField fieldType="Bairro" fieldValue="Perdizes" />
-            </div>
+            <FormField fieldType="Endereço" fieldValue="Rua Avenida Avenida" />
+            <FormField fieldType="Bairro" fieldValue="Perdizes" />
           </div>
         </div>
       </div>

@@ -1,11 +1,10 @@
 import { Title } from "@/components/ui/title";
 import { Header } from "@/components/header";
 import { EditClientInformations } from "@/modals/edit-client-informations";
+import { EditPetInformations } from "@/modals/edit-pet-informations";
 import { ButtonOfAction } from "@/components/ui/button-of-action";
 import { UserConsult } from "./user-consult";
 import { Footer } from "@/components/footer";
-
-import { GoPencil } from "react-icons/go";
 
 export function User() {
   return (
@@ -18,10 +17,7 @@ export function User() {
           <div className="flex flex-col gap-8 w-fit max-[600px]:items-center max-[600px]:w-full">
             <EditClientInformations />
 
-            <ButtonOfAction>
-              <span>Editar pets</span>
-              <GoPencil />
-            </ButtonOfAction>
+            <EditPetInformations />
 
             <ButtonOfAction>
               <span>Excluir conta</span>

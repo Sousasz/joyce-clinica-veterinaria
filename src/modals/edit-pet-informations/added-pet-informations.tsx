@@ -1,10 +1,10 @@
-import { UserFields } from "./user-fields";
+import { PetFields } from "./pet-fields";
 import { Touchable } from "@/components/ui/touchable";
 
-export function AddedUserInformations() {
+export function AddedPetInformations() {
   return (
     <div className="flex flex-col gap-10">
-      <UserFields />
+      <PetFields />
       <Touchable>Concluído</Touchable>
     </div>
   );
