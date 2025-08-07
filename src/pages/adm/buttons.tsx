@@ -1,12 +1,12 @@
 import { ButtonOfAction } from "@/components/ui/button-of-action";
 import { IconType } from "react-icons/lib";
-import { AddMedicinesModal } from "@/modals/add-medicines";
+import { EditMedicinesModal } from "@/modals/edit-medicines";
 import { RatingModal } from "@/modals/ratings";
 
 import { Dialog, DialogTrigger } from "@/components/ui/shadcn/dialog";
 
 const modalComponent: Record<string, JSX.Element> = {
-  Medicamento: <AddMedicinesModal />,
+  Medicamento: <EditMedicinesModal />,
   Vacina: <></>,
   Avaliação: <RatingModal />,
 };

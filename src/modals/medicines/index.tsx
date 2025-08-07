@@ -1,4 +1,5 @@
 import { MedicinesList } from "./medicines-list";
+import { medicines } from "@/constants/medicines";
 
 import { DialogContent, DialogHeader } from "@/components/ui/shadcn/dialog";
 
@@ -10,7 +11,7 @@ export function MedicinesModal() {
           MEDICAMENTOS
         </DialogHeader>
 
-        <MedicinesList />
+        <MedicinesList  />
       </div>
     </DialogContent>
   );

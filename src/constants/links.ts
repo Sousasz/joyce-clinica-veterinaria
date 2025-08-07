@@ -7,23 +7,31 @@ type LinkProps = {
 
 export const links: LinkProps = [
   {
-    id: 'home' ,
+    id: '#home' ,
     link: 'Home'
   },
   {
-    id: 'services' ,
+    id: '#services' ,
     link: 'Nossos Serviços'
   },
   {
-    id: 'booking' ,
+    id: '#booking' ,
     link: 'Agendamento'
   },
   {
-    id: 'reviews' ,
+    id: '#reviews' ,
     link: 'Nossas Avaliações'
   },
   {
-    id: 'areas' ,
+    id: '#areas' ,
     link: 'Áreas atendidas'
+  },
+  {
+    id: 'adm' ,
+    link: 'Admin'
+  },
+  {
+    id: 'usuario' ,
+    link: 'Perfil'
   }
 ]

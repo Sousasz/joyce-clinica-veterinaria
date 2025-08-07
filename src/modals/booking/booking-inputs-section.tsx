@@ -5,7 +5,7 @@ export function BookingInputsSection() {
     <div className="flex items-center gap-5 max-[550px]:flex-col">
       <img src="" alt="Imagem do pet" />
 
-      <section className="flex flex-col gap-3 bg-red-500">
+      <section className="flex flex-col gap-3">
         <Input name="petname" placeholder="Nome" />
 
         <Input name="specie" placeholder="Espécie" />

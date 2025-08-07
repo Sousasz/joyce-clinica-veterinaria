@@ -1,7 +1,7 @@
 
 
 type medicinesProps = {
-  name: string,
+  medicineName: string,
   description: string
 }[]
 
