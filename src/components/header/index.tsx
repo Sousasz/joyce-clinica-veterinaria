@@ -22,12 +22,9 @@ export function Header() {
           <nav className="hidden lg:block">
             <ul className="flex gap-10">
               <li>
-                <a href="#home">Home</a>
+                <a href="/#home">Home</a>
               </li>
 
-              {/* <li>
-                <a href="/#services">Nossos serviços</a>
-              </li> */}
               <li>
                 <Link to="/#services">Nossos serviços</Link>
               </li>

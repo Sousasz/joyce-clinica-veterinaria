@@ -11,7 +11,7 @@ export function MedicinesInjectablesModal() {
           MEDICAMENTOS
         </DialogHeader>
 
-        <MedicinesInjectablesList />
+        {/* <MedicinesInjectablesList /> */}
       </div>
     </DialogContent>
   );
