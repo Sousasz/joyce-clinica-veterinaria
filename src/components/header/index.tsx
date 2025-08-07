@@ -25,28 +25,31 @@ export function Header() {
                 <a href="#home">Home</a>
               </li>
 
+              {/* <li>
+                <a href="/#services">Nossos serviços</a>
+              </li> */}
               <li>
-                <a href="#services">Nossos serviços</a>
+                <Link to="/#services">Nossos serviços</Link>
               </li>
 
               <li>
-                <a href="#booking">Agendamento</a>
+                <a href="/#booking">Agendamento</a>
               </li>
 
               <li>
-                <a href="#rating">Nossas avaliações</a>
+                <a href="/#rating">Nossas avaliações</a>
               </li>
 
               <li>
-                <a href="#areas">Áreas atendidas</a>
+                <a href="/#areas">Áreas atendidas</a>
               </li>
 
               <li>
-                <Link to="/adm">Nossas avaliações</Link>
+                <Link to="/adm">Admin</Link>
               </li>
 
               <li>
-                <Link to="/usuario">Nossas avaliações</Link>
+                <Link to="/usuario">Usuário</Link>
               </li>
 
             </ul>
