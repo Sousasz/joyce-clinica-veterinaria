@@ -19,7 +19,7 @@ export const links: LinkProps = [
     link: 'Agendamento'
   },
   {
-    id: '#reviews',
+    id: '#rating',
     link: 'Nossas Avaliações'
   },
   {

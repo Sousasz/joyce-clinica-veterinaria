@@ -21,13 +21,34 @@ export function Header() {
           <DogImage className="size-16" />
           <nav className="hidden lg:block">
             <ul className="flex gap-10">
-              {links.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <Link to={`${item.id}`}>{item.link}</Link>
-                  </li>
-                );
-              })}
+              <li>
+                <a href="#home">Home</a>
+              </li>
+
+              <li>
+                <a href="#services">Nossos serviços</a>
+              </li>
+
+              <li>
+                <a href="#booking">Agendamento</a>
+              </li>
+
+              <li>
+                <a href="#rating">Nossas avaliações</a>
+              </li>
+
+              <li>
+                <a href="#areas">Áreas atendidas</a>
+              </li>
+
+              <li>
+                <Link to="/adm">Nossas avaliações</Link>
+              </li>
+
+              <li>
+                <Link to="/usuario">Nossas avaliações</Link>
+              </li>
+
             </ul>
           </nav>
         </div>
