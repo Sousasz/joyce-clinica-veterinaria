@@ -2,6 +2,7 @@ import { CallToAction } from "./call-to-action";
 import { IoIosMenu } from "react-icons/io";
 import DogImage from "../../../public/assets/logo.svg?react";
 import { UserSignIn } from "@/modals/user-signin";
+import { Link } from "react-router-dom";
 
 import { useState } from "react";
 import { links } from "@/constants/links";
@@ -23,7 +24,7 @@ export function Header() {
               {links.map((item, index) => {
                 return (
                   <li key={index}>
-                    <a href={`/${item.id}`}>{item.link}</a>
+                    <a href={`${item.id}`}>{item.link}</a>
                   </li>
                 );
               })}
