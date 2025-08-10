@@ -1,4 +1,3 @@
-import { GoPencil, GoTrash } from "react-icons/go";
 
 type Medicine = {
   id: string;
@@ -26,16 +25,6 @@ export function MedicinesInjectablesList({ medicines }: MedicineListProps) {
                     <li className="underline list-disc text-xl">
                       {medicine.medicineName}
                     </li>
-
-                    <div className="flex gap-3">
-                      <button className="cursor-pointer">
-                        <GoPencil className="size-5" />
-                      </button>
-
-                      <button className="cursor-pointer">
-                        <GoTrash className="size-5" />
-                      </button>
-                    </div>
                   </div>
                   <p>{medicine.description}</p>
                 </div>

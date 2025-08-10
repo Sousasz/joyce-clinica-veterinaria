@@ -1,4 +1,4 @@
-import { MedicinesList } from "./medicines-list";
+// import { MedicinesList } from "./medicines-list";
 
 import { DialogContent, DialogHeader } from "@/components/ui/shadcn/dialog";
 
@@ -9,8 +9,8 @@ export function MedicinesModal() {
         <DialogHeader className="max-w-full flex items-center">
           MEDICAMENTOS
         </DialogHeader>
-
-        {/* <MedicinesList /> */}
+        {/*! Add Query Param */}
+        {/* <MedicinesList medicines={medicines} /> */}
       </div>
     </DialogContent>
   );

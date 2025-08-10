@@ -1,17 +1,10 @@
-import { MedicinesList } from "../medicines/medicines-list";
-import { MedicinesInjectablesList } from "../medicines-injectables/medicines-injectables-list";
+import { DialogContent, DialogHeader } from "@/components/ui/shadcn/dialog";
 import { AddMedicinesModal } from "../add-medicines";
-import { Touchable } from "@/components/ui/touchable";
-import { TextArea } from "@/components/ui/text-area";
-import { Input } from "@/components/ui/shadcn/input";
+
+import { useState, FormEvent } from "react";
 import { v4 } from "uuid";
-import { useState, FormEvent, ChangeEvent } from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTrigger,
-} from "@/components/ui/shadcn/dialog";
+
+import { GoPencil, GoTrash } from "react-icons/go";
 
 type Medicine = {
   id: string;
@@ -27,13 +20,11 @@ export function EditMedicinesModal() {
 
   const [medicineName, setMedicineName] = useState("");
   const [description, setDescription] = useState("");
-  const [medicineType, setMedicineType] = useState<MedicineType>(
-    "injectable-medicines"
-  );
+  const [medicineType, setMedicineType] = useState<MedicineType>("no-injectables-medicines");
 
   function onFormSubmit(e: FormEvent) {
     e.preventDefault();
-    
+
     let duplicate = false;
 
     medicines.map((medicine) => {
@@ -49,8 +40,8 @@ export function EditMedicinesModal() {
       medicineType,
     };
 
-    if(medicineName === "") {
-      return null
+    if (medicineName === "") {
+      return null;
     }
 
     if (duplicate) {
@@ -74,74 +65,81 @@ export function EditMedicinesModal() {
         <div className="flex flex-col gap-14">
           <div className="flex flex-col gap-2">
             <h4 className="font-bold text-2xl">Não injetáveis:</h4>
-            <MedicinesList medicines={medicines} />
+            <div>
+              <ul className="flex flex-col gap-3">
+                {medicines.map((medicine, index) => {
+                  return (
+                    <>
+                      {medicine.medicineType === "no-injectables-medicines" && (
+                        <div key={index} className="flex flex-col gap-1">
+                          <div className="flex gap-4 justify-between items-center">
+                            <li className="underline list-disc text-xl">
+                              {medicine.medicineName}
+                            </li>
+
+                            {/* Add just to the adm */}
+                            <div className="flex gap-3">
+                              <button className="cursor-pointer">
+                                <GoPencil className="size-5" />
+                              </button>
+
+                              <button className="cursor-pointer">
+                                <GoTrash className="size-5" />
+                              </button>
+                            </div>
+                          </div>
+                          <p>{medicine.description}</p>
+                        </div>
+                      )}
+                    </>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
 
           <div className="flex flex-col gap-2">
             <h4 className="font-bold text-2xl">Injetáveis:</h4>
-            <MedicinesInjectablesList medicines={medicines} />
+            <div>
+              <ul className="flex flex-col gap-3">
+                {medicines.map((medicine, index) => {
+                  return (
+                    <>
+                      {medicine.medicineType === "injectable-medicines" && (
+                        <div key={index} className="flex flex-col gap-1">
+                          <div className="flex gap-4 justify-between items-center">
+                            <li className="underline list-disc text-xl">
+                              {medicine.medicineName}
+                            </li>
+
+                            <div className="flex gap-3">
+                              <button className="cursor-pointer">
+                                <GoPencil className="size-5" />
+                              </button>
+
+                              <button className="cursor-pointer">
+                                <GoTrash className="size-5" />
+                              </button>
+                            </div>
+                          </div>
+                          <p>{medicine.description}</p>
+                        </div>
+                      )}
+                    </>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
         </div>
 
-        <Dialog>
-          <DialogTrigger>
-            <Touchable>Adicionar medicamento</Touchable>
-          </DialogTrigger>
-
-          <DialogContent className="shadow-default bg-green-light bg-[url('/public/background-image.svg')] bg-cover bg-center bg-no-repeat rounded-4xl font-poppins">
-            <div className="backdrop-blur-md bg-white/25 shadow-2xl p-10 rounded-4xl flex flex-col gap-5 max-h-[80vh] overflow-y-scroll scrollbar-hide">
-              <form onSubmit={onFormSubmit} className="flex flex-col gap-7">
-                <div className="flex flex-col gap-5">
-                  <Input
-                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                      setMedicineName(e.target.value)
-                    }
-                    placeholder="Nome do medicamento"
-                  />
-                  <TextArea
-                    onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
-                      setDescription(e.target.value)
-                    }
-                  />
-                </div>
-
-                <div className="flex flex-col gap-2">
-                  <div className="flex items-center gap-1">
-                    <input
-                      type="radio"
-                      name="medicine-type"
-                      value="no-injectables-medicines"
-                      checked={medicineType === 'no-injectables-medicines'}
-                      onChange={(e) =>
-                        setMedicineType(e.target.value as MedicineType)
-                      }
-                    />
-                    <label htmlFor="no-injectables-medicines">
-                      Medicamento não injetável
-                    </label>
-                  </div>
-
-                  <div className="flex items-center gap-1">
-                    <input
-                      type="radio"
-                      name="medicine-type"
-                      value="injectables-medicines"
-                      checked={medicineType === 'injectable-medicines'}
-                      onChange={(e) =>
-                        setMedicineType(e.target.value as MedicineType)
-                      }
-                    />
-                    <label htmlFor="injectables-medicines">
-                      Medicamento injetável
-                    </label>
-                  </div>
-                </div>
-
-                <Touchable>Adicionar</Touchable>
-              </form>
-            </div>
-          </DialogContent>
-        </Dialog>
+        <AddMedicinesModal
+          onFormSubmit={onFormSubmit}
+          medicineType={medicineType}
+          setDescription={setDescription}
+          setMedicineName={setMedicineName}
+          setMedicineType={setMedicineType}
+        />
       </div>
     </DialogContent>
   );

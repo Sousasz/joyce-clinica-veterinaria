@@ -4,40 +4,40 @@ import {
   DialogTrigger,
 } from "@/components/ui/shadcn/dialog";
 import { Touchable } from "@/components/ui/touchable";
-import { AddMedicinesForm } from "./add-medicines-form";
+import { AddVacinesForm } from "./add-vacines-form";
 import { FormEvent } from "react";
 
-type MedicineType = "injectable-medicines" | "no-injectables-medicines";
+type VacineType = "for-dogs" | "for-cats";
 
-type AddMedicinesModalProps = {
+type AddVacinesModalProps = {
   onFormSubmit: (e: FormEvent) => void;
-  setMedicineName: React.Dispatch<React.SetStateAction<string>>;
+  setVacineName: React.Dispatch<React.SetStateAction<string>>;
   setDescription: React.Dispatch<React.SetStateAction<string>>;
-  medicineType: string;
-  setMedicineType: React.Dispatch<React.SetStateAction<MedicineType>>;
+  vacineType: string;
+  setVacineType: React.Dispatch<React.SetStateAction<VacineType>>;
 };
 
-export function AddMedicinesModal({
+export function AddVacinesModal({
   onFormSubmit,
-  setMedicineName,
+  setVacineName,
   setDescription,
-  medicineType,
-  setMedicineType,
-}: AddMedicinesModalProps) {
+  vacineType,
+  setVacineType,
+}: AddVacinesModalProps) {
   return (
     <Dialog>
       <DialogTrigger>
-        <Touchable>Adicionar medicamento</Touchable>
+        <Touchable>Adicionar vacina</Touchable>
       </DialogTrigger>
 
       <DialogContent className="shadow-default bg-green-light bg-[url('/public/background-image.svg')] bg-cover bg-center bg-no-repeat rounded-4xl font-poppins">
         <div className="backdrop-blur-md bg-white/25 shadow-2xl p-10 rounded-4xl flex flex-col gap-5 max-h-[80vh] overflow-y-scroll scrollbar-hide">
-          <AddMedicinesForm
+          <AddVacinesForm
             onFormSubmit={onFormSubmit}
-            medicineType={medicineType}
-            setMedicineName={setMedicineName}
+            vacineType={vacineType}
+            setVacineName={setVacineName}
             setDescription={setDescription}
-            setMedicineType={setMedicineType}
+            setVacineType={setVacineType}
           />
         </div>
       </DialogContent>

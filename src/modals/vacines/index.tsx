@@ -10,7 +10,7 @@ export function VacinesModal() {
           VACINAS
         </DialogHeader>
 
-        <VacinesList />
+        <VacinesList vacines={vacines}/>
       </div>
     </DialogContent>
   );
