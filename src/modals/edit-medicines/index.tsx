@@ -13,19 +13,25 @@ type Medicine = {
   medicineType: MedicineType;
 };
 
-type MedicineType = "injectable-medicines" | "no-injectables-medicines";
+type MedicineType = "injectables-medicines" | "no-injectables-medicines";
 
 export function EditMedicinesModal() {
   const [medicines, setMedicines] = useState<Medicine[]>([]);
 
   const [medicineName, setMedicineName] = useState("");
   const [description, setDescription] = useState("");
-  const [medicineType, setMedicineType] = useState<MedicineType>("no-injectables-medicines");
+  const [medicineType, setMedicineType] = useState<MedicineType>(
+    "no-injectables-medicines"
+  );
 
   function onFormSubmit(e: FormEvent) {
     e.preventDefault();
 
     let duplicate = false;
+
+    if (!medicineName || !medicineType) {
+      return null;
+    }
 
     medicines.map((medicine) => {
       if (medicineName === medicine.medicineName) {
@@ -52,7 +58,7 @@ export function EditMedicinesModal() {
 
     setMedicineName("");
     setDescription("");
-    setMedicineType("injectable-medicines");
+    setMedicineType("no-injectables-medicines");
   }
 
   return (
@@ -105,7 +111,7 @@ export function EditMedicinesModal() {
                 {medicines.map((medicine, index) => {
                   return (
                     <>
-                      {medicine.medicineType === "injectable-medicines" && (
+                      {medicine.medicineType === "injectables-medicines" && (
                         <div key={index} className="flex flex-col gap-1">
                           <div className="flex gap-4 justify-between items-center">
                             <li className="underline list-disc text-xl">

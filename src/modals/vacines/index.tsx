@@ -1,4 +1,4 @@
-import { VacinesList } from "./vacines-list";
+// import { VacinesList } from "./vacines-list";
 
 import { DialogContent, DialogHeader } from "@/components/ui/shadcn/dialog";
 
@@ -10,7 +10,7 @@ export function VacinesModal() {
           VACINAS
         </DialogHeader>
 
-        <VacinesList vacines={vacines}/>
+        {/* <VacinesList vacines={vacines}/> */}
       </div>
     </DialogContent>
   );

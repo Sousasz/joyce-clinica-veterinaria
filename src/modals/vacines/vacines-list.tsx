@@ -14,7 +14,7 @@ type VacinesListProps = {
 export function VacinesList({ vacines }: VacinesListProps) {
   return (
     <div className="flex flex-col gap-12">
-      <ul className="flex flex-col gap-4">
+      <ul className="flex flex-col gap-0.5 bg-red-500">
         <h4 className="font-bold text-2xl">Para cães:</h4>
         {vacines.map((vacine, index) => {
           return (
@@ -32,7 +32,7 @@ export function VacinesList({ vacines }: VacinesListProps) {
         })}
       </ul>
 
-      <ul className="flex flex-col gap-4">
+      <ul className="flex flex-col">
         <h4 className="font-bold text-2xl">Para gatos:</h4>
         {vacines.map((vacine, index) => {
           return (

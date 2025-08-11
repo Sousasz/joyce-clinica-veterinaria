@@ -7,7 +7,7 @@ import { Touchable } from "@/components/ui/touchable";
 import { AddMedicinesForm } from "./add-medicines-form";
 import { FormEvent } from "react";
 
-type MedicineType = "injectable-medicines" | "no-injectables-medicines";
+type MedicineType = "injectables-medicines" | "no-injectables-medicines";
 
 type AddMedicinesModalProps = {
   onFormSubmit: (e: FormEvent) => void;

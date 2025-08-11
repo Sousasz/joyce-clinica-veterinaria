@@ -40,7 +40,8 @@ export function AddVacinesForm({
           <input
             type="radio"
             name="vacine-type"
-            value={vacineType}
+            value="for-dogs"
+            checked={vacineType === 'for-dogs'}
             onChange={(e) => setVacineType(e.target.value as VacineType)}
           />
           <label htmlFor="for-dogs">
@@ -52,7 +53,8 @@ export function AddVacinesForm({
           <input
             type="radio"
             name="vacine-type"
-            value={vacineType}
+            value="for-cats"
+            checked={vacineType === 'for-cats'}
             onChange={(e) => setVacineType(e.target.value as VacineType)}
           />
           <label htmlFor="for-cats">Para gatos</label>

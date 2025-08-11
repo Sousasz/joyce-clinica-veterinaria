@@ -3,7 +3,7 @@ import { TextArea } from "@/components/ui/text-area";
 import { Touchable } from "@/components/ui/touchable";
 import { ChangeEvent, FormEvent } from "react";
 
-type MedicineType = "injectable-medicines" | "no-injectables-medicines";
+type MedicineType = "injectables-medicines" | "no-injectables-medicines";
 
 type AddMedicinesFormProps = {
   onFormSubmit: (e: FormEvent) => void;
@@ -40,7 +40,8 @@ export function AddMedicinesForm({
             <input
               type="radio"
               name="medicine-type"
-              value={medicineType}
+              value="no-injectables-medicines"
+              checked={medicineType === 'no-injectables-medicines'}
               onChange={(e) => setMedicineType(e.target.value as MedicineType)}
             />
             <label htmlFor="no-injectables-medicines">
@@ -52,7 +53,8 @@ export function AddMedicinesForm({
             <input
               type="radio"
               name="medicine-type"
-              value={medicineType}
+              value="injectables-medicines"
+              checked={medicineType === 'injectables-medicines'}
               onChange={(e) => setMedicineType(e.target.value as MedicineType)}
             />
             <label htmlFor="injectables-medicines">Medicamento injetável</label>

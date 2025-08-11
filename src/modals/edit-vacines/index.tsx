@@ -19,10 +19,14 @@ export function EditVacinesModal() {
 
   const [vacineName, setVacineName] = useState("");
   const [description, setDescription] = useState("");
-  const [vacineType, setVacineType] = useState<VacineType>("for-dogs");
+  const [vacineType, setVacineType] = useState<VacineType>("for-cats");
 
   function onFormSubmit(e: FormEvent) {
     e.preventDefault();
+    
+    if(!vacineName || !vacineType) {
+      return null
+    }
 
     let duplicate = false;
 
@@ -51,7 +55,7 @@ export function EditVacinesModal() {
 
     setVacineName("");
     setDescription("");
-    setVacineType("for-dogs");
+    setVacineType("for-cats");
   }
 
   return (
