@@ -32,7 +32,7 @@ export function VacinesList({ vacines }: VacinesListProps) {
         })}
       </ul>
 
-      <ul className="flex flex-col">
+      <ul className="flex flex-col  ">
         <h4 className="font-bold text-2xl">Para gatos:</h4>
         {vacines.map((vacine, index) => {
           return (

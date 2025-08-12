@@ -1,5 +1,6 @@
 import { Title } from "@/components/ui/title";
 import { TextArea } from "@/components/ui/text-area";
+import { BookingDate } from "./booking-date";
 
 export function BookingDetails() {
   return (
@@ -12,7 +13,7 @@ export function BookingDetails() {
 
       <div className="flex flex-col gap-5">
         <Title>Data e hora</Title>
-        <div className="text-center">Calendar</div>
+        <BookingDate />
       </div>
     </div>
   );
