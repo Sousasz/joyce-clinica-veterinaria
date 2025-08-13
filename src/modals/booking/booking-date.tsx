@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { ChevronDownIcon } from "lucide-react";
-
+import { ptBR } from "date-fns/locale";
 import { Button } from "@/components/ui/shadcn/button";
 import { Calendar } from "@/components/ui/shadcn/calendar";
 import { Input } from "@/components/ui/shadcn/input";
@@ -18,13 +18,13 @@ export function BookingDate() {
   const [date, setDate] = React.useState<Date | undefined>(undefined);
 
   return (
-    <div className="flex gap-4 font-poppins">
-      <div className="flex flex-col gap-3">
+    <div className="flex gap-4 font-poppins max-[600px]:flex-col max-[600px]:items-center">
+      <div className="flex flex-col gap-3 max-[600px]:items-center">
         <Label htmlFor="date-picker" className="px-1">
           Data
         </Label>
         <Popover open={open} onOpenChange={setOpen}>
-          <PopoverTrigger  asChild>
+          <PopoverTrigger asChild>
             <Button
               variant="outline"
               id="date-picker"
@@ -40,11 +40,8 @@ export function BookingDate() {
               mode="single"
               disabled={(day) => {
                 const today = new Date();
-                return (
-                  day.getFullYear() !== today.getFullYear() ||
-                  (day.getFullYear() === today.getFullYear() &&
-                    day.getMonth() < today.getMonth())
-                );
+                today.setHours(0, 0, 0, 0);
+                return day < today; 
               }}
               selected={date}
               captionLayout="dropdown"
@@ -52,11 +49,12 @@ export function BookingDate() {
                 setDate(date);
                 setOpen(false);
               }}
+              locale={ptBR}
             />
           </PopoverContent>
         </Popover>
       </div>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 max-[600px]:items-center">
         <Label htmlFor="time-picker" className="px-1">
           Hora
         </Label>
