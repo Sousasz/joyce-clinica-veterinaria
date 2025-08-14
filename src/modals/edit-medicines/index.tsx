@@ -1,10 +1,13 @@
 import { DialogContent, DialogHeader } from "@/components/ui/shadcn/dialog";
 import { AddMedicinesModal } from "../add-medicines";
+import { FaCheck } from "react-icons/fa6";
 
 import { useState, FormEvent } from "react";
 import { v4 } from "uuid";
 
 import { GoPencil, GoTrash } from "react-icons/go";
+
+type MedicineType = "injectables-medicines" | "no-injectables-medicines";
 
 type Medicine = {
   id: string;
@@ -12,8 +15,6 @@ type Medicine = {
   description: string;
   medicineType: MedicineType;
 };
-
-type MedicineType = "injectables-medicines" | "no-injectables-medicines";
 
 export function EditMedicinesModal() {
   const [medicines, setMedicines] = useState<Medicine[]>([]);
@@ -24,41 +25,139 @@ export function EditMedicinesModal() {
     "no-injectables-medicines"
   );
 
-  function onFormSubmit(e: FormEvent) {
+  const [editingItemId, setEditingItemId] = useState<string | null>(null);
+  const [tempName, setTempName] = useState("");
+
+  function resetForm() {
+    setMedicineName("");
+    setDescription("");
+    setMedicineType("no-injectables-medicines");
+  }
+
+  function addMedicine(e: FormEvent) {
     e.preventDefault();
 
-    let duplicate = false;
+    const trimmedName = medicineName.trim();
+    if (!trimmedName) return;
 
-    if (!medicineName || !medicineType) {
-      return null;
-    }
-
-    medicines.map((medicine) => {
-      if (medicineName === medicine.medicineName) {
-        duplicate = true;
-      }
-    });
+    const duplicate = medicines.some((m) => m.medicineName === trimmedName);
+    if (duplicate) return;
 
     const newMedicine: Medicine = {
       id: v4(),
-      medicineName,
+      medicineName: trimmedName,
       description,
       medicineType,
     };
 
-    if (medicineName === "") {
-      return null;
-    }
+    setMedicines((prev) => [...prev, newMedicine]);
+    resetForm();
+  }
 
-    if (duplicate) {
-      return null;
-    } else {
-      setMedicines([...medicines, newMedicine]);
-    }
+  function startInlineEditing(id: string, currentName: string) {
+    setEditingItemId(id);
+    setTempName(currentName);
+  }
 
-    setMedicineName("");
-    setDescription("");
-    setMedicineType("no-injectables-medicines");
+  function saveInlineEdit(id: string) {
+    if (!tempName.trim()) return;
+    setMedicines((prev) =>
+      prev.map((m) =>
+        m.id === id ? { ...m, medicineName: tempName.trim() } : m
+      )
+    );
+    setEditingItemId(null);
+    setTempName("");
+  }
+
+  function cancelInlineEdit() {
+    setEditingItemId(null);
+    setTempName("");
+  }
+
+  function deleteMedicine(id: string) {
+    setMedicines((prev) => prev.filter((m) => m.id !== id));
+    if (editingItemId === id) cancelInlineEdit();
+  }
+
+  // Render a section (to avoid repeating code)
+  function renderSection(title: string, type: MedicineType) {
+    return (
+      <div className="flex flex-col gap-2">
+        <h4 className="font-bold text-2xl">{title}</h4>
+        <div>
+          <ul className="flex flex-col gap-3">
+            {medicines
+              .filter((m) => m.medicineType === type)
+              .map((medicine) => (
+                <div key={medicine.id} className="flex flex-col gap-1">
+                  <div className="flex gap-4 justify-between items-center">
+                    <li className="underline list-disc text-xl">
+                      {editingItemId === medicine.id ? (
+                        <input
+                          type="text"
+                          value={tempName}
+                          onChange={(e) => setTempName(e.target.value)}
+                          onKeyDown={(e) => {
+                            if (e.key === "Enter") saveInlineEdit(medicine.id);
+                            if (e.key === "Escape") cancelInlineEdit();
+                          }}
+                          autoFocus
+                          className="border border-gray-400 rounded px-2 py-1"
+                        />
+                      ) : (
+                        medicine.medicineName
+                      )}
+                    </li>
+
+                    <div className="flex gap-3">
+                      {editingItemId === medicine.id ? (
+                        <>
+                          <button
+                            onClick={() => saveInlineEdit(medicine.id)}
+                            title="Salvar"
+                          >
+                            <FaCheck />
+                          </button>
+                          <button onClick={cancelInlineEdit} title="Cancelar">
+                            ✖
+                          </button>
+                        </>
+                      ) : (
+                        <>
+                          <button
+                            className="cursor-pointer"
+                            onClick={() =>
+                              startInlineEditing(
+                                medicine.id,
+                                medicine.medicineName
+                              )
+                            }
+                            aria-label="Editar medicamento"
+                            title="Editar"
+                          >
+                            <GoPencil className="size-5" />
+                          </button>
+
+                          <button
+                            className="cursor-pointer"
+                            onClick={() => deleteMedicine(medicine.id)}
+                            aria-label="Remover medicamento"
+                            title="Excluir"
+                          >
+                            <GoTrash className="size-5" />
+                          </button>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                  <p>{medicine.description}</p>
+                </div>
+              ))}
+          </ul>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -69,78 +168,12 @@ export function EditMedicinesModal() {
         </DialogHeader>
 
         <div className="flex flex-col gap-14">
-          <div className="flex flex-col gap-2">
-            <h4 className="font-bold text-2xl">Não injetáveis:</h4>
-            <div>
-              <ul className="flex flex-col gap-3">
-                {medicines.map((medicine, index) => {
-                  return (
-                    <>
-                      {medicine.medicineType === "no-injectables-medicines" && (
-                        <div key={index} className="flex flex-col gap-1">
-                          <div className="flex gap-4 justify-between items-center">
-                            <li className="underline list-disc text-xl">
-                              {medicine.medicineName}
-                            </li>
-
-                            {/* Add just to the adm */}
-                            <div className="flex gap-3">
-                              <button className="cursor-pointer">
-                                <GoPencil className="size-5" />
-                              </button>
-
-                              <button className="cursor-pointer">
-                                <GoTrash className="size-5" />
-                              </button>
-                            </div>
-                          </div>
-                          <p>{medicine.description}</p>
-                        </div>
-                      )}
-                    </>
-                  );
-                })}
-              </ul>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <h4 className="font-bold text-2xl">Injetáveis:</h4>
-            <div>
-              <ul className="flex flex-col gap-3">
-                {medicines.map((medicine, index) => {
-                  return (
-                    <>
-                      {medicine.medicineType === "injectables-medicines" && (
-                        <div key={index} className="flex flex-col gap-1">
-                          <div className="flex gap-4 justify-between items-center">
-                            <li className="underline list-disc text-xl">
-                              {medicine.medicineName}
-                            </li>
-
-                            <div className="flex gap-3">
-                              <button className="cursor-pointer">
-                                <GoPencil className="size-5" />
-                              </button>
-
-                              <button className="cursor-pointer">
-                                <GoTrash className="size-5" />
-                              </button>
-                            </div>
-                          </div>
-                          <p>{medicine.description}</p>
-                        </div>
-                      )}
-                    </>
-                  );
-                })}
-              </ul>
-            </div>
-          </div>
+          {renderSection("Não injetáveis:", "no-injectables-medicines")}
+          {renderSection("Injetáveis:", "injectables-medicines")}
         </div>
 
         <AddMedicinesModal
-          onFormSubmit={onFormSubmit}
+          addMedicine={addMedicine}
           medicineType={medicineType}
           setDescription={setDescription}
           setMedicineName={setMedicineName}

@@ -1,5 +1,7 @@
 import { ConsultDetailsModal } from "@/modals/consult-details";
 import { FormField } from "@/components/ui/form-field";
+import { format } from "date-fns";
+import { ptBR } from "date-fns/locale";
 
 type Consult = {
   typeOfConsult: string;
@@ -36,7 +38,10 @@ export function ConsultInformations({
 
       <div className="flex max-[330px]:flex-col max-[330px]:gap-3 justify-between w-full">
         <div className="flex max-[330px]:flex-col max-[330px]:gap-1 gap-5">
-          <FormField fieldType="Data" fieldValue={consult.date} />
+          <FormField
+            fieldType="Data"
+            fieldValue={format(consult.date, "dd/MM/yyyy", { locale: ptBR })}
+          />
           <FormField fieldType="Hora" fieldValue={consult.hour} />
         </div>
 

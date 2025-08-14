@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/shadcn/button";
 import { Calendar } from "@/components/ui/shadcn/calendar";
 import { Input } from "@/components/ui/shadcn/input";
 import { Label } from "@/components/ui/shadcn/label";
+import { format } from "date-fns"
 import {
   Popover,
   PopoverContent,
@@ -36,12 +37,12 @@ export function BookingDate() {
           </PopoverTrigger>
           <PopoverContent className="w-auto overflow-hidden p-0" align="start">
             <Calendar
-              className="font-poppins "
+              className="font-poppins"
               mode="single"
               disabled={(day) => {
                 const today = new Date();
                 today.setHours(0, 0, 0, 0);
-                return day < today; 
+                return day < today;
               }}
               selected={date}
               captionLayout="dropdown"
@@ -50,6 +51,11 @@ export function BookingDate() {
                 setOpen(false);
               }}
               locale={ptBR}
+              formatters={{
+                formatWeekdayName: (day) => {
+                  return format(day, "EEEEE", { locale: ptBR });
+                },
+              }}
             />
           </PopoverContent>
         </Popover>

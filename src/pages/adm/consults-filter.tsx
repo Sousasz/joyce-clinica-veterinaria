@@ -27,7 +27,8 @@ export function ConsultsFilter() {
   });
 
   return (
-    <div className="p-4 space-y-4">
+    <div className="flex flex-col p-4 space-y-4">
+      <span>Filtrar por data:</span>
       <Popover>
         <PopoverTrigger asChild>
           <Button
@@ -51,11 +52,17 @@ export function ConsultsFilter() {
         </PopoverTrigger>
         <PopoverContent className="w-auto p-0" align="start">
           <Calendar
+            className="font-poppins"
             mode="range"
             selected={dateRange}
             onSelect={setDateRange}
             numberOfMonths={2}
             locale={ptBR}
+            formatters={{
+              formatWeekdayName: (day) => {
+                return format(day, "EEEEE", { locale: ptBR });
+              },
+            }}
           />
         </PopoverContent>
       </Popover>
@@ -64,7 +71,7 @@ export function ConsultsFilter() {
       <div className="space-y-2">
         {filteredConsults.length > 0 ? (
           filteredConsults.map((consult, index) => (
-              <ConsultInformations consult={consult} index={index} />
+            <ConsultInformations consult={consult} index={index} />
           ))
         ) : (
           <p className="text-sm text-gray-500">Nenhuma consulta encontrada.</p>

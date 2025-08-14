@@ -6,7 +6,7 @@ import { ChangeEvent, FormEvent } from "react";
 type VacineType = "for-dogs" | "for-cats";
 
 type AddVacinesFormProps = {
-  onFormSubmit: (e: FormEvent) => void;
+  addVacine: (e: FormEvent) => void;
   setVacineName: React.Dispatch<React.SetStateAction<string>>;
   setDescription: React.Dispatch<React.SetStateAction<string>>;
   vacineType: string;
@@ -14,14 +14,14 @@ type AddVacinesFormProps = {
 };
 
 export function AddVacinesForm({
-  onFormSubmit,
+  addVacine,
   setVacineName,
   setDescription,
   vacineType,
   setVacineType,
 }: AddVacinesFormProps) {
   return (
-    <form onSubmit={onFormSubmit} className="flex flex-col gap-7">
+    <form onSubmit={addVacine} className="flex flex-col gap-7">
       <div className="flex flex-col gap-5">
         <Input
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
