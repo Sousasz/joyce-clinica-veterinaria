@@ -48,7 +48,6 @@ export function Header() {
               <li>
                 <Link to="/usuario">Usuário</Link>
               </li>
-
             </ul>
           </nav>
         </div>
@@ -65,14 +64,34 @@ export function Header() {
           {isOpenMenu ? (
             <>
               <div className="w-full flex justify-end">
-                <ul className="bg-white border border-b-black border-l-black border-white p-3 flex flex-col gap-5 bottom-0 top-[6.5rem] right-0 absolute z-1 h-58">
-                  {links.map((item, index) => {
-                    return (
-                      <li key={index}>
-                        <a href={`/${item.id}`}>{item.link}</a>
-                      </li>
-                    );
-                  })}
+                <ul className="bg-white border border-b-black border-l-black border-white p-3 flex flex-col gap-5 bottom-0 top-[6.5rem] right-0 absolute z-1 h-80">
+                  <li>
+                    <a href="/#home">Home</a>
+                  </li>
+
+                  <li>
+                    <Link to="/#services">Nossos serviços</Link>
+                  </li>
+
+                  <li>
+                    <a href="/#booking">Agendamento</a>
+                  </li>
+
+                  <li>
+                    <a href="/#rating">Nossas avaliações</a>
+                  </li>
+
+                  <li>
+                    <a href="/#areas">Áreas atendidas</a>
+                  </li>
+
+                  <li>
+                    <Link to="/adm">Admin</Link>
+                  </li>
+
+                  <li>
+                    <Link to="/usuario">Usuário</Link>
+                  </li>
                 </ul>
               </div>
             </>
