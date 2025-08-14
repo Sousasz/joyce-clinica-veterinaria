@@ -67,7 +67,6 @@ export function ConsultsFilter() {
         </PopoverContent>
       </Popover>
 
-      {/* Lista filtrada */}
       <div className="space-y-2">
         {filteredConsults.length > 0 ? (
           filteredConsults.map((consult, index) => (

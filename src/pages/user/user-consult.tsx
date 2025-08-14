@@ -7,8 +7,8 @@ import { ptBR } from "date-fns/locale";
 
 export function UserConsult() {
   return (
-    <div className="flex flex-col gap-10">
-      <Title>Suas consultas</Title>
+    <div className="flex flex-col gap-2">
+      <Title className="py-5">Suas consultas</Title>
 
       {consults.map((consult, index) => {
         return (
