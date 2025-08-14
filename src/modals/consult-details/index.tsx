@@ -14,7 +14,7 @@ export function ConsultDetailsModal() {
     <Dialog>
       <form>
         <DialogTrigger asChild>
-          <button className="underline cursor-pointer max-[330px]:text-start max-[330px]:w-fit">
+          <button className="underline cursor-pointer max-[330px]:text-start">
             Ver mais...
           </button>
         </DialogTrigger>

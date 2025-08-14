@@ -6,7 +6,6 @@ export function BookedConsults() {
     <div className="flex flex-col gap-10">
       <Title>Consultas agendadas</Title>
       <ConsultsFilter />
-      
     </div>
   );
 }

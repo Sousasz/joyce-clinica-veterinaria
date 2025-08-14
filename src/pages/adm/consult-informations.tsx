@@ -23,29 +23,35 @@ export function ConsultInformations({
   return (
     <div
       key={index}
-      className="bg-gray-50 shadow-xl/20 border-1 border-gray-200 p-5 rounded-4xl"
+      className="bg-gray-50 shadow-xl/20 border-1 border-gray-200 pt-5 pr-5 pl-5 rounded-4xl w-full"
     >
       <span className="font-bold underline">{consult.typeOfConsult}</span>
 
-      <div className="flex flex-col my-8">
-        <span>{consult.clientName}</span>
-        <FormField
-          className="max-[330px]:truncate"
-          fieldType="Endereço"
-          fieldValue={consult.adress}
-        />
-      </div>
-
-      <div className="flex max-[330px]:flex-col max-[330px]:gap-3 justify-between w-full">
-        <div className="flex max-[330px]:flex-col max-[330px]:gap-1 gap-5">
+      <div className="flex flex-col my-5">
+        <div className="flex flex-col">
           <FormField
-            fieldType="Data"
-            fieldValue={format(consult.date, "dd/MM/yyyy", { locale: ptBR })}
+            className="max-[600px]:truncate"
+            fieldType="Nome"
+            fieldValue={consult.clientName}
           />
-          <FormField fieldType="Hora" fieldValue={consult.hour} />
+          <FormField
+            className="max-[600px]:truncate"
+            fieldType="Endereço"
+            fieldValue={consult.adress}
+          />
         </div>
 
-        <ConsultDetailsModal />
+        <div className="flex max-[600px]:flex-col max-[600px]:gap-5 justify-between w-full">
+          <div className="flex max-[600px]:flex-col max-[600px]:gap-0.5 gap-3">
+            <FormField
+              fieldType="Data"
+              fieldValue={format(consult.date, "dd/MM/yyyy", { locale: ptBR })}
+            />
+            <FormField fieldType="Hora" fieldValue={consult.hour} />
+          </div>
+
+          <ConsultDetailsModal />
+        </div>
       </div>
     </div>
   );

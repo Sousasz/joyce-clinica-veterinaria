@@ -70,7 +70,7 @@ export function ConsultsFilter() {
       <div className="space-y-2">
         {filteredConsults.length > 0 ? (
           filteredConsults.map((consult, index) => (
-            <ConsultInformations consult={consult} index={index} />
+              <ConsultInformations consult={consult} index={index} />
           ))
         ) : (
           <p className="text-sm text-gray-500">Nenhuma consulta encontrada.</p>
